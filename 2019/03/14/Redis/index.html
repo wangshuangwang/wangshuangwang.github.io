@@ -79,13 +79,29 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="[TOC] 一、Redis 是什么Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。 五种类型数据类型为：字符串、列表、集合、有序集合、散列表。 Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。 二、五种基本类型   数据类型 可以存储的值 操作     STRING 字符串、整数或者浮点">
+<meta property="og:type" content="article">
 <meta property="og:title" content="欢迎来到天纵旺才的博客">
-<meta property="og:url" content="https://wangshuangwang.github.io/index.html">
+<meta property="og:url" content="https://wangshuangwang.github.io/2019/03/14/Redis/index.html">
 <meta property="og:site_name" content="欢迎来到天纵旺才的博客">
+<meta property="og:description" content="[TOC] 一、Redis 是什么Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。 五种类型数据类型为：字符串、列表、集合、有序集合、散列表。 Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。 二、五种基本类型   数据类型 可以存储的值 操作     STRING 字符串、整数或者浮点">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/6019b2db-bc3e-4408-b6d8-96025f4481d6.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/fb327611-7e2b-4f2f-9f5b-38592d408f07.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/cd5fbcff-3f35-43a6-8ffa-082a93ce0f0e.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/7bd202a7-93d4-4f3a-a878-af68ae25539a.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/1202b2d6-9469-4251-bd47-ca6034fb6116.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/bee1ff1d-c80f-4b3c-b58c-7073a8896ab2.jpg">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/395a9e83-b1a1-4a1d-b170-d081e7bb5bab.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/dda1608d-26e0-4f10-8327-a459969b150a.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/7c54de21-e2ff-402e-bc42-4037de1c1592.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/485fdf34-ccf8-4185-97c6-17374ee719a0.png">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/f7d170a3-e446-4a64-ac2d-cb95028f81a8.png">
+<meta property="og:updated_time" content="2019-03-14T07:39:48.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欢迎来到天纵旺才的博客">
+<meta name="twitter:description" content="[TOC] 一、Redis 是什么Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。 五种类型数据类型为：字符串、列表、集合、有序集合、散列表。 Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。 二、五种基本类型   数据类型 可以存储的值 操作     STRING 字符串、整数或者浮点">
+<meta name="twitter:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/6019b2db-bc3e-4408-b6d8-96025f4481d6.png">
 
 
 
@@ -115,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://wangshuangwang.github.io/">
+  <link rel="canonical" href="https://wangshuangwang.github.io/2019/03/14/Redis/">
 
 
 
 
 
-  <title>欢迎来到天纵旺才的博客</title>
+  <title> | 欢迎来到天纵旺才的博客</title>
   
 
 
@@ -140,8 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +259,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/14/Redis/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -328,9 +341,7 @@
       
 
       
-        
-          
-            <p>[TOC]</p>
+        <p>[TOC]</p>
 <h1 id="一、Redis-是什么"><a href="#一、Redis-是什么" class="headerlink" title="一、Redis 是什么"></a>一、Redis 是什么</h1><p>Redis 是速度非常快的非关系型（NoSQL）内存键值数据库，可以存储键和五种不同类型的值之间的映射。</p>
 <p>五种类型数据类型为：字符串、列表、集合、有序集合、散列表。</p>
 <p>Redis 支持很多特性，例如将内存中的数据持久化到硬盘中，使用复制来扩展读性能，使用分片来扩展写性能。</p>
@@ -530,8 +541,6 @@
 <li><a href="http://developers-club.com/posts/270339/" target="_blank" rel="noopener">Observer vs Pub-Sub</a></li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -548,131 +557,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wangshuangwang.github.io/2019/03/14/安装hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="天纵旺才">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="欢迎来到天纵旺才的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/14/安装hexo/" itemprop="url">安装hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-14T15:15:30+08:00">
-                2019-03-14
-              </time>
+              <a href="/2019/03/14/安装hexo/" rel="next" title="安装hexo">
+                <i class="fa fa-chevron-left"></i> 安装hexo
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -682,138 +588,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wangshuangwang.github.io/2019/03/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="天纵旺才">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="欢迎来到天纵旺才的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/14/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-14T12:26:17+08:00">
-                2019-03-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -821,6 +600,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -841,8 +624,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -884,6 +676,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、Redis-是什么"><span class="nav-number">1.</span> <span class="nav-text">一、Redis 是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、五种基本类型"><span class="nav-number">2.</span> <span class="nav-text">二、五种基本类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-STRING"><span class="nav-number">2.1.</span> <span class="nav-text">1. STRING</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-LIST"><span class="nav-number">2.2.</span> <span class="nav-text">2. LIST</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-SET"><span class="nav-number">2.3.</span> <span class="nav-text">3. SET</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-HASH"><span class="nav-number">2.4.</span> <span class="nav-text">4. HASH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-ZSET"><span class="nav-number">2.5.</span> <span class="nav-text">5. ZSET</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、键的过期时间"><span class="nav-number">3.</span> <span class="nav-text">三、键的过期时间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、发布与订阅"><span class="nav-number">4.</span> <span class="nav-text">四、发布与订阅</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、事务"><span class="nav-number">5.</span> <span class="nav-text">五、事务</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、持久化"><span class="nav-number">6.</span> <span class="nav-text">六、持久化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-快照持久化"><span class="nav-number">6.1.</span> <span class="nav-text">1. 快照持久化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-AOF-持久化"><span class="nav-number">6.2.</span> <span class="nav-text">2. AOF 持久化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#七、复制"><span class="nav-number">7.</span> <span class="nav-text">七、复制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#从服务器连接主服务器的过程"><span class="nav-number">7.1.</span> <span class="nav-text">从服务器连接主服务器的过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主从链"><span class="nav-number">7.2.</span> <span class="nav-text">主从链</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#八、处理故障"><span class="nav-number">8.</span> <span class="nav-text">八、处理故障</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#九、分片"><span class="nav-number">9.</span> <span class="nav-text">九、分片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-客户端分片"><span class="nav-number">9.1.</span> <span class="nav-text">1. 客户端分片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-代理分片"><span class="nav-number">9.2.</span> <span class="nav-text">2. 代理分片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-服务器分片"><span class="nav-number">9.3.</span> <span class="nav-text">3. 服务器分片</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十、事件"><span class="nav-number">10.</span> <span class="nav-text">十、事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#事件类型"><span class="nav-number">10.1.</span> <span class="nav-text">事件类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-文件事件"><span class="nav-number">10.1.1.</span> <span class="nav-text">1. 文件事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-时间事件"><span class="nav-number">10.1.2.</span> <span class="nav-text">2. 时间事件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件的调度与执行"><span class="nav-number">10.2.</span> <span class="nav-text">事件的调度与执行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十一、Redis-与-Memcached-的区别"><span class="nav-number">11.</span> <span class="nav-text">十一、Redis 与 Memcached 的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">11.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据持久化"><span class="nav-number">11.2.</span> <span class="nav-text">数据持久化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式"><span class="nav-number">11.3.</span> <span class="nav-text">分布式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存管理机制"><span class="nav-number">11.4.</span> <span class="nav-text">内存管理机制</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十二、Redis-适用场景"><span class="nav-number">12.</span> <span class="nav-text">十二、Redis 适用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存"><span class="nav-number">12.1.</span> <span class="nav-text">缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息队列"><span class="nav-number">12.2.</span> <span class="nav-text">消息队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计数器"><span class="nav-number">12.3.</span> <span class="nav-text">计数器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#好友关系"><span class="nav-number">12.4.</span> <span class="nav-text">好友关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十三、数据淘汰策略"><span class="nav-number">13.</span> <span class="nav-text">十三、数据淘汰策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#十四、一个简单的论坛系统分析"><span class="nav-number">14.</span> <span class="nav-text">十四、一个简单的论坛系统分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文章信息"><span class="nav-number">14.1.</span> <span class="nav-text">文章信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点赞功能"><span class="nav-number">14.2.</span> <span class="nav-text">点赞功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对文章进行排序"><span class="nav-number">14.3.</span> <span class="nav-text">对文章进行排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">15.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1017,6 +825,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
