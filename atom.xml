@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>欢迎来到天纵旺才的博客</title>
+  <title>Swans</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wangshuangwang.github.io/"/>
-  <updated>2019-03-14T07:15:30.752Z</updated>
+  <updated>2019-03-15T08:18:39.612Z</updated>
   <id>https://wangshuangwang.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>书籍推荐</title>
+    <link href="https://wangshuangwang.github.io/2019/03/15/%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90/"/>
+    <id>https://wangshuangwang.github.io/2019/03/15/书籍推荐/</id>
+    <published>2019-03-15T07:08:38.000Z</published>
+    <updated>2019-03-15T08:18:39.612Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="围城"><a href="#围城" class="headerlink" title="围城"></a>围城</h3><p>经典书评：毋庸置疑的经典之作。都说围城写婚姻，其实不然，每个阶段读都会有不同的感受，<br>          婚姻，人性，人生，真实摊开，刺到骨子里，觉得人人刻薄的要命，机关算尽，可这就是现实啊。<br>          最喜欢的还是书里的金句，笑点也挺多，真毒舌啊，钱老爷子真是行家啊。</p><h3 id="小王子"><a href="#小王子" class="headerlink" title="小王子"></a>小王子</h3><p>经典书评：如果有人钟爱着一朵独一无二的、盛开在浩瀚星海里的花。那么，当他抬头仰望繁星时，便会心满意足。<br>          他会告诉自己：“我心爱的花在那里，在那颗遥远的星星上。”可是，如果羊把花吃掉了。那么，对他来说，<br>          所有的星光便会在刹那间暗淡无光！而你却认为这并不重要！</p><h3 id="活着"><a href="#活着" class="headerlink" title="活着"></a>活着</h3><p>经典书评：生而为人，生老病死、贫穷富贵、心甘情愿、逆来顺受总是要吃苦的。横竖都是吃苦，不如吃的洒脱点儿，<br>          谁能说阿Q精神全然没有可取的地方。只要活着，就有希望，要做到否极泰来要耗掉多少希望、时间，熬得过来的是英雄，<br>          熬不过来的是烈士。人生好坏都是受的过程，能偷生地偷生，不能的拍拍身上尘土做点儿样子给外人看总是好的</p><h3 id="追风筝的人"><a href="#追风筝的人" class="headerlink" title="追风筝的人"></a>追风筝的人</h3><p>经典书评：其实每个人的生活很平淡,可能没有那样的事情让你来面对与阿米尔类似的困境.也没有人太多的人回象小说里的阿米尔那样,<br>          在自己犯了错的多年以后,还能有重新赎罪的机会.现实中并没有太多机会去体会,也不会有太多的人愿意有这种机会来体会.<br>          人们往往会忽视那个永远躲在角落,但是却是永远对你最亲的人.我们就是这样对待那些对自己全心全意而又别无他求的人的吗</p><h3 id="平凡的世界"><a href="#平凡的世界" class="headerlink" title="平凡的世界"></a>平凡的世界</h3><p>经典书评：生活没有如果，他们的命运告诉了我们。我们每个人的命运都受制于这个时代。我们不能完完全全的决定着自己的命运，<br>          我们要做的是怎样让我们更幸福。有远大的理想很好，想平凡的生活也好，这只是我们追求幸福的一种途径。</p><h3 id="倾城之恋"><a href="#倾城之恋" class="headerlink" title="倾城之恋"></a>倾城之恋</h3><p>经典书评：《倾城之恋》主要写了白流苏和范柳原之间的爱情故事。女主人公白流苏，是一个离过婚的女人，在家族中的地位低下，<br>          常遭到家人的唾骂及冷眼歧视。后来在妹妹宝络的相亲宴山遇到并爱上花花公子范柳原。于是她和范柳原展开了一场如“战争”式的恋爱。<br>          在这场恋爱中他们互相猜疑，互相算计，生怕自已会陷入对方的陷阱中。后来战争爆发了，炮声冲击着整个城市，<br>          他们这两个无依无靠的灵魂最终紧紧连在一起，成为乱世中的平凡夫妻。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;围城&quot;&gt;&lt;a href=&quot;#围城&quot; class=&quot;head
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>安装hexo</title>
