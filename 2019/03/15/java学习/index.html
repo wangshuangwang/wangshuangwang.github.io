@@ -9,13 +9,20 @@
   
   <title>欢迎来到天纵旺才的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="一、关键字 final static   二、Object 通用方法 概览 equals() hashCode() toString() clone()   四、继承 访问权限 抽象类与接口 super 覆盖与重载   五、String String, StringBuffer and StringBuilder String 不可变的原因 String.intern()   六、基本类型与运算">
+<meta property="og:type" content="article">
 <meta property="og:title" content="欢迎来到天纵旺才的博客">
-<meta property="og:url" content="https://wangshuangwang.github.io/index.html">
+<meta property="og:url" content="https://wangshuangwang.github.io/2019/03/15/java学习/index.html">
 <meta property="og:site_name" content="欢迎来到天纵旺才的博客">
+<meta property="og:description" content="一、关键字 final static   二、Object 通用方法 概览 equals() hashCode() toString() clone()   四、继承 访问权限 抽象类与接口 super 覆盖与重载   五、String String, StringBuffer and StringBuilder String 不可变的原因 String.intern()   六、基本类型与运算">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/f76067a5-7d5f-4135-9549-8199c77d8f1c.jpg">
+<meta property="og:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/PPjwP.png">
+<meta property="og:updated_time" content="2019-03-13T04:04:43.555Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欢迎来到天纵旺才的博客">
+<meta name="twitter:description" content="一、关键字 final static   二、Object 通用方法 概览 equals() hashCode() toString() clone()   四、继承 访问权限 抽象类与接口 super 覆盖与重载   五、String String, StringBuffer and StringBuilder String 不可变的原因 String.intern()   六、基本类型与运算">
+<meta name="twitter:image" content="https://github.com/mi-minus/Interview-Notebook/raw/master/pics/f76067a5-7d5f-4135-9549-8199c77d8f1c.jpg">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到天纵旺才的博客" type="application/atom+xml">
   
@@ -29,9 +36,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -42,8 +46,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -271,895 +275,7 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-强大终端工具:terminator" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/15/强大终端工具:terminator/" class="article-date">
-      <time datetime="2019-03-15T03:08:25.847Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="强大终端工具一：terminator"><a href="#强大终端工具一：terminator" class="headerlink" title="强大终端工具一：terminator"></a>强大终端工具一：<a href="http://terminator-gtk3.readthedocs.io/en/latest/" target="_blank" rel="noopener">terminator</a></h3><ol>
-<li><p>简介:</p>
-<p>官方使用教程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Terminator 就可以完美地实现了在 Ubuntu在同一窗口中启动多个终端，并且可以自由的在一个窗口中分割区域建立新终端，还可以通过鼠标拉伸调整每个终端的大小</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装／卸载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install terminator</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>快捷键</p>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ctrl + shift + x</td>
-<td>小屏切换全屏</td>
-</tr>
-<tr>
-<td>ctrl + shift + z</td>
-<td>小屏切换全屏(文字屏幕大小比不变)</td>
-</tr>
-<tr>
-<td>ctrl + shift + e</td>
-<td>水平分屏</td>
-</tr>
-<tr>
-<td>ctrl + shift + o</td>
-<td>竖直分屏</td>
-</tr>
-<tr>
-<td>ctrl + pagedown</td>
-<td>跳转到下一个tab</td>
-</tr>
-<tr>
-<td>ctrl + pageup</td>
-<td>跳转到上一个tab</td>
-</tr>
-<tr>
-<td>ctrl + shift + pagedown/pageup</td>
-<td>移动tab间的顺序</td>
-</tr>
-<tr>
-<td>f11</td>
-<td>完全全屏</td>
-</tr>
-<tr>
-<td>ctrl + shift + w</td>
-<td>关闭当前屏</td>
-</tr>
-<tr>
-<td>alt + 上下左右</td>
-<td>tab 之间进行转换</td>
-</tr>
-<tr>
-<td>ctrl + shift + 上下左右</td>
-<td>对当前窗口上下左右边移动放大</td>
-</tr>
-<tr>
-<td>alt + a</td>
-<td>Broadall on</td>
-</tr>
-<tr>
-<td>alt + o</td>
-<td>Broadall off</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+C</td>
-<td>copy</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+V</td>
-<td>paste</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + T</td>
-<td>打开一个新的标签页</td>
-</tr>
-<tr>
-<td>Ctrl + Shift + Q</td>
-<td>退出该软件</td>
-</tr>
-<tr>
-<td>Ctrl + Plus(+)</td>
-<td>增大当前终端字体大小（可能需要同时按Shift)</td>
-</tr>
-<tr>
-<td>Ctrl + Minux(-)</td>
-<td>减小当前终端字体大小（可能需要同时按Shift)</td>
-</tr>
-<tr>
-<td>Ctrl + zero(0)</td>
-<td>将字体大小恢复到初始化大小</td>
-</tr>
-<tr>
-<td>Ctrl + tab / ctr+shift+n</td>
-<td>同窗口各小窗口间循环选中</td>
-</tr>
-<tr>
-<td>Ctr+shift+f</td>
-<td>窗口中搜索</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+G</td>
-<td>小窗口重设并清空窗口</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+I/win+i</td>
-<td>打开一个新开启的窗口</td>
-</tr>
-<tr>
-<td>Win + R</td>
-<td>一个tab中移动小窗口位置</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li><p>~/.config/terminator/config配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">[global_config]                                                                                                                                                                                                     </span><br><span class="line">[keybindings]</span><br><span class="line">[layouts]</span><br><span class="line">  [[default]]</span><br><span class="line"> [[[child0]]]</span><br><span class="line">   position=600</span><br><span class="line">   order = 0 </span><br><span class="line">   parent = window0</span><br><span class="line">   type = VPaned</span><br><span class="line"></span><br><span class="line"> [[[child1]]]    </span><br><span class="line">   position=960</span><br><span class="line">   order = 0 </span><br><span class="line">   parent = child0</span><br><span class="line">   profile = default</span><br><span class="line">   type = HPaned </span><br><span class="line"></span><br><span class="line"> [[[child2]]]</span><br><span class="line">   order = 1 </span><br><span class="line">   parent = child0</span><br><span class="line">   profile = default</span><br><span class="line">   type = HPaned</span><br><span class="line"></span><br><span class="line"> [[[term1]]]    </span><br><span class="line">   profile = default</span><br><span class="line">   order = 0 </span><br><span class="line">   parent = child1</span><br><span class="line">   type = Terminal </span><br><span class="line"></span><br><span class="line"> [[[term2]]]    </span><br><span class="line">   profile = default</span><br><span class="line">   order = 1 </span><br><span class="line">   parent = child1</span><br><span class="line">   type = Terminal </span><br><span class="line"></span><br><span class="line"> [[[term3]]]    </span><br><span class="line">   profile = default</span><br><span class="line">   order = 0 </span><br><span class="line">   parent = child2</span><br><span class="line">   type = Terminal </span><br><span class="line"></span><br><span class="line"> [[[term4]]]    </span><br><span class="line">   profile = default</span><br><span class="line">   order = 1 </span><br><span class="line">   parent = child2</span><br><span class="line">   type = Terminal </span><br><span class="line"></span><br><span class="line"> [[[window0]]]</span><br><span class="line">   order = 0 </span><br><span class="line">   parent = &quot;&quot;</span><br><span class="line">   position = 1440:0</span><br><span class="line">   size = 1920, 1200</span><br><span class="line">   type = Window</span><br><span class="line">[plugins]</span><br><span class="line">[profiles]</span><br><span class="line">  [[default]]</span><br><span class="line"> background_image = None</span><br><span class="line"> font = Monaco Bold 12</span><br><span class="line">    use_system_font = False</span><br></pre></td></tr></table></figure>
-<p>显示效果如下图： <img src="http://www.mi-minus.cn/res/img/blog/linux%E5%AD%A6%E4%B9%A0/terminator-screen.png" alt="terminator"></p>
-</li>
-</ol>
-<h3 id="强大的shell工具一-screen"><a href="#强大的shell工具一-screen" class="headerlink" title="强大的shell工具一: screen"></a>强大的shell工具一: screen</h3><ol>
-<li><p>简介</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen是linux下的一种多重视窗管理程序。在使用telnet或SSH远程登录linux时，如果连接非正常中断，重新连接时，系统将开一个新的session，无法恢复原来的session.screen命令可以解决这个问题。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install screen</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>基本命令</p>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>screen -S session_name</td>
-<td>创建一个叫session_name的会话</td>
-</tr>
-<tr>
-<td>screen -ls</td>
-<td>列出会话</td>
-</tr>
-<tr>
-<td>screen -r session_name</td>
-<td>重新进入到一个dettach的会话</td>
-</tr>
-<tr>
-<td>screen -d session_name</td>
-<td>退出已attach的session</td>
-</tr>
-</tbody>
-</table>
-<h3 id="强大终端shell工具二：tmux"><a href="#强大终端shell工具二：tmux" class="headerlink" title="强大终端shell工具二：tmux"></a>强大终端shell工具二：<a href="https://wiki.archlinux.org/index.php/tmux" target="_blank" rel="noopener">tmux</a></h3><ol>
-<li><p>简介</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Tmux(terminal multiplexer) 是一个终端复用器: 可以激活多个终端或窗口, 在每个终端都可以单独访问，每一个终端都可以访问，运行和控制各自的程序.tmux类似于screen，可以关闭窗口将程序放在后台运行，需要的时候再重新连接</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>基本命令</p>
-</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>tmux</td>
-<td>启动tmux</td>
-</tr>
-<tr>
-<td>tmux ls</td>
-<td>列出会话</td>
-</tr>
-<tr>
-<td>tmux new -s session_name</td>
-<td>开启一个新的session</td>
-</tr>
-<tr>
-<td>tmux a</td>
-<td>进入到第一个可用会话</td>
-</tr>
-<tr>
-<td>tmux attach/a -t session</td>
-<td>进入     某个会话</td>
-</tr>
-<tr>
-<td>tmux kill-session -t &lt;会话名&gt;</td>
-<td>杀死一个session</td>
-</tr>
-<tr>
-<td>tmux rename-session -t &lt;会话名&gt;</td>
-<td>对一个session进行重命名</td>
-</tr>
-<tr>
-<td>Ctrl-b d</td>
-<td>detached a session</td>
-</tr>
-<tr>
-<td>ctrl-b $</td>
-<td>给session指定名字</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>windows命令</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ctrl-b c</td>
-<td>新建窗口</td>
-</tr>
-<tr>
-<td>ctrl-b &amp;</td>
-<td>关闭窗口</td>
-</tr>
-<tr>
-<td>ctrl-b num</td>
-<td>指定到某个窗口</td>
-</tr>
-<tr>
-<td>ctrl-b p/n</td>
-<td>切换到上/下窗口</td>
-</tr>
-<tr>
-<td>ctrl-b l</td>
-<td>在两个窗口之间互相切换</td>
-</tr>
-<tr>
-<td>ctrl-b w</td>
-<td>通过窗口列表切换窗口</td>
-</tr>
-<tr>
-<td>ctrl-b f</td>
-<td>在所有窗口中查找指定文本</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>panel命令</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ctrl-b t</td>
-<td>很酷的一个时钟</td>
-</tr>
-<tr>
-<td>ctrl-b x</td>
-<td>关闭一个panel</td>
-</tr>
-<tr>
-<td>ctrl-b “</td>
-<td>在下边分割出来一个pane</td>
-</tr>
-<tr>
-<td>Ctrl-b %</td>
-<td>在右边分割出来一个pane</td>
-</tr>
-<tr>
-<td>tmux -r</td>
-<td>连接上次断开的session</td>
-</tr>
-<tr>
-<td>Ctrl-b o[方向键]</td>
-<td>在多个panes中切换，下一个</td>
-</tr>
-<tr>
-<td>ctrl-b q</td>
-<td>显示各panel编号</td>
-</tr>
-<tr>
-<td>ctrl-b num</td>
-<td>直接跳到你按的数字所在的window</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li>tmux结构示意图</li>
-</ol>
-<p><img src="http://www.mi-minus.cn/res/img/blog/linux%E5%AD%A6%E4%B9%A0/tmux.jpg" alt="tmux"></p>
-<h3 id="强大终端编辑工具：vim"><a href="#强大终端编辑工具：vim" class="headerlink" title="强大终端编辑工具：vim"></a>强大终端编辑工具：vim</h3><ol>
-<li>vim配置文件</li>
-<li>编辑快捷键</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a / i</td>
-<td>光标后／光标处插入</td>
-</tr>
-<tr>
-<td>o / O</td>
-<td>当前行下／上插入新空行</td>
-</tr>
-<tr>
-<td>o / O</td>
-<td>当前行下／上插入新空行</td>
-</tr>
-<tr>
-<td>dd</td>
-<td>删除当前行</td>
-</tr>
-<tr>
-<td>gg</td>
-<td>光标到第一行行首</td>
-</tr>
-<tr>
-<td>yw</td>
-<td>复制从光标开始到词尾的字符</td>
-</tr>
-<tr>
-<td>yy / nyy</td>
-<td>拷贝光标所在行/下面几行</td>
-</tr>
-<tr>
-<td>daw</td>
-<td>删除 光标所处在那个单词</td>
-</tr>
-<tr>
-<td>G</td>
-<td>光标到最后一行行首</td>
-</tr>
-<tr>
-<td>n</td>
-<td>在同一方向重复上一次搜索命令</td>
-</tr>
-<tr>
-<td>N</td>
-<td>在反方向上重复上一次搜索命令</td>
-</tr>
-<tr>
-<td>r</td>
-<td>替换光标处字符</td>
-</tr>
-<tr>
-<td>x</td>
-<td>删除光标处字符</td>
-</tr>
-<tr>
-<td>u</td>
-<td>撤销上一步操作</td>
-</tr>
-<tr>
-<td>U</td>
-<td>撤销对当前行的所有操作</td>
-</tr>
-<tr>
-<td>ctrl + r</td>
-<td>恢复上一步操作</td>
-</tr>
-<tr>
-<td>d0</td>
-<td>删至行首</td>
-</tr>
-<tr>
-<td>d$</td>
-<td>删至行尾</td>
-</tr>
-<tr>
-<td>h/j/k/l</td>
-<td>光标左／下／上／右移动</td>
-</tr>
-<tr>
-<td>p / P</td>
-<td>拷贝到当前位置之后／前</td>
-</tr>
-<tr>
-<td>fx</td>
-<td>往右移动到x字符上</td>
-</tr>
-<tr>
-<td>Fx</td>
-<td>往左移动到x字符上</td>
-</tr>
-<tr>
-<td>tx</td>
-<td>往右移动到x字符前</td>
-</tr>
-<tr>
-<td>Tx</td>
-<td>往左移动到x字符后</td>
-</tr>
-<tr>
-<td>L</td>
-<td>当前屏幕的末行</td>
-</tr>
-<tr>
-<td>H</td>
-<td>当前屏幕的首行</td>
-</tr>
-<tr>
-<td>M</td>
-<td>当前屏幕的中间行</td>
-</tr>
-<tr>
-<td>w</td>
-<td>将光标右移一个字(字首位置)</td>
-</tr>
-<tr>
-<td>W</td>
-<td>将光标右移连续字段首位置</td>
-</tr>
-<tr>
-<td>e</td>
-<td>将光标右移一个字(字末位置)</td>
-</tr>
-<tr>
-<td>E</td>
-<td>将光标右移连续字段末位置</td>
-</tr>
-<tr>
-<td>b</td>
-<td>将光标左移一个字(字首位置)</td>
-</tr>
-<tr>
-<td>B</td>
-<td>将光标左移连续字段首位置</td>
-</tr>
-<tr>
-<td>ctrl + o</td>
-<td>返回到上次光标的位置</td>
-</tr>
-<tr>
-<td>ctrl + i</td>
-<td>返回到最后一次光标的位置</td>
-</tr>
-<tr>
-<td>{ / }</td>
-<td>跳到上一段的开头 ／ 跳到下一段的的开头</td>
-</tr>
-<tr>
-<td>( / )</td>
-<td>移到这个句子的开头 / 移到下一个句子的开头</td>
-</tr>
-<tr>
-<td>ctrl + e</td>
-<td>屏幕向上滚动</td>
-</tr>
-<tr>
-<td>ctrl + y</td>
-<td>屏幕向下滚动</td>
-</tr>
-<tr>
-<td>ctrl + v</td>
-<td>块选择</td>
-</tr>
-<tr>
-<td>shift + v</td>
-<td>行选择</td>
-</tr>
-<tr>
-<td>Ctrl+u</td>
-<td>向文件首翻半屏</td>
-</tr>
-<tr>
-<td>Ctrl+d</td>
-<td>向文件尾翻半屏</td>
-</tr>
-<tr>
-<td>Ctrl+f</td>
-<td>向文件尾翻一屏</td>
-</tr>
-<tr>
-<td>Ctrl＋b</td>
-<td>向文件首翻一屏</td>
-</tr>
-<tr>
-<td>shift + v</td>
-<td>行选择</td>
-</tr>
-</tbody>
-</table>
-<ol>
-<li><p>下标快捷键</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">:w                      : 保存，不退出</span><br><span class="line">:w  xxx                 : 保存至xxx文件，不退出</span><br><span class="line">:wq                      : 保存并退出</span><br><span class="line">:q!                      : 不保存，强制退出</span><br><span class="line">:set fileencoding       :   查看当前文件的编码</span><br><span class="line">:set fenc=编码           :   转换当前编码为制定的编码</span><br><span class="line">:set enc=编码            :   以指定的编码显示当前文本，但是不保存</span><br><span class="line">:set ff?                :   查看当前文本的模式类型，一般为dos,unix</span><br><span class="line">:set ff=dos/unix         :  设置为dos/ unix</span><br><span class="line">:set nu                 :  显示行号</span><br><span class="line">:set nonu</span><br><span class="line">:set hlsearch           : 设置选中词汇均高亮</span><br><span class="line">:list                   : 显示制表位(Ctrl+I)和行尾标志（$)</span><br><span class="line">:1,$s/old_str/new_str/g  :  替换第一行到最后一行</span><br><span class="line">:s/old_str/new_str/g     :  只替换当前行</span><br><span class="line">/pattern                : 从光标开始处向文件尾搜索pattern</span><br><span class="line">?pattern                : 从光标开始处向文件首搜索pattern</span><br><span class="line">:n1,n2 d                : 将n1行到n2行之间的内容删除</span><br><span class="line">:n1,n2 co n3            : 将n1行到n2行之间的内容拷贝到第n3行下</span><br><span class="line">:n1,n2 m n3             : 将n1行到n2行之间的内容移至到第n3行下</span><br><span class="line">:!command               : 执行shell命令command</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>vim中需要权限保存</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:w !sudo tee %</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>vim命令示意图</p>
-</li>
-</ol>
-<p><img src="http://www.mi-minus.cn/res/img/blog/linux%E5%AD%A6%E4%B9%A0/vi-vim-cheat-sheet.gif" alt="vim-命令"></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/15/正则表达式/" class="article-date">
-      <time datetime="2019-03-15T03:08:22.431Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>[TOC]</p>
-<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>正则表达式用于文本内容的查找和替换。</p>
-<p>正则表达式内置于其它语言或者软件产品中，它本身不是一种语言或者软件。</p>
-<p><a href="http://tool.oschina.net/regex/" target="_blank" rel="noopener">正则表达式在线工具</a></p>
-<h1 id="二、匹配单个字符"><a href="#二、匹配单个字符" class="headerlink" title="二、匹配单个字符"></a>二、匹配单个字符</h1><p>正则表达式一般是区分大小写的，但是也有些实现是不区分。</p>
-<p><strong>.</strong> 可以用来匹配任何的单个字符，但是在绝大多数实现里面，不能匹配换行符；</p>
-<p><strong>\</strong> 是元字符，表示它有特殊的含义，而不是字符本身的含义。如果需要匹配 . ，那么要用 \ 进行转义，即在 . 前面加上 \ 。</p>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nam.</span><br></pre></td></tr></table></figure>
-<p><strong>匹配结果</strong></p>
-<p>My <strong>name</strong> is Zheng.</p>
-<h1 id="三、匹配一组字符"><a href="#三、匹配一组字符" class="headerlink" title="三、匹配一组字符"></a>三、匹配一组字符</h1><p><strong>[ ]</strong> 定义一个字符集合；</p>
-<p>0-9、a-z 定义了一个字符区间，区间使用 ASCII 码来确定，字符区间只能用在 [ ] 之间。</p>
-<p><strong>-</strong> 元字符只有在 [ ] 之间才是元字符，在 [ ] 之外就是一个普通字符；</p>
-<p><strong>^</strong> 是取非操作，必须在 [ ] 字符集合中使用；</p>
-<p><strong>应用</strong></p>
-<p>匹配以 abc 为开头，并且最后一个字母不为数字的字符串：</p>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abc[^0-9]</span><br></pre></td></tr></table></figure>
-<p><strong>匹配结果</strong></p>
-<ol>
-<li><strong>abcd</strong></li>
-<li>abc1</li>
-<li>abc2</li>
-</ol>
-<h1 id="四、使用元字符"><a href="#四、使用元字符" class="headerlink" title="四、使用元字符"></a>四、使用元字符</h1><h2 id="匹配空白字符"><a href="#匹配空白字符" class="headerlink" title="匹配空白字符"></a>匹配空白字符</h2><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[\b]</td>
-<td>回退（删除）一个字符</td>
-</tr>
-<tr>
-<td>\f</td>
-<td>换页符</td>
-</tr>
-<tr>
-<td>\n</td>
-<td>换行符</td>
-</tr>
-<tr>
-<td>\r</td>
-<td>回车符</td>
-</tr>
-<tr>
-<td>\t</td>
-<td>制表符</td>
-</tr>
-<tr>
-<td>\v</td>
-<td>垂直制表符</td>
-</tr>
-</tbody>
-</table>
-<p>\r\n 是 Windows 中的文本行结束标签，在 Unix/Linux 则是 \n ；\r\n\r\n 可以匹配 Windows 下的空白行，因为它将匹配两个连续的行尾标签，而这正是两条记录之间的空白行；</p>
-<p>. 是元字符，前提是没有对它们进行转义；f 和 n 也是元字符，但是前提是对它们进行了转义。</p>
-<h2 id="匹配特定的字符类别"><a href="#匹配特定的字符类别" class="headerlink" title="匹配特定的字符类别"></a>匹配特定的字符类别</h2><h3 id="1-数字元字符"><a href="#1-数字元字符" class="headerlink" title="1. 数字元字符"></a>1. 数字元字符</h3><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\d</td>
-<td>数字字符，等价于 [0-9]</td>
-</tr>
-<tr>
-<td>\D</td>
-<td>非数字字符，等价于 [^0-9]</td>
-</tr>
-</tbody>
-</table>
-<h3 id="2-字母数字元字符"><a href="#2-字母数字元字符" class="headerlink" title="2. 字母数字元字符"></a>2. 字母数字元字符</h3><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\w</td>
-<td>大小写字母，下划线和数字，等价于 [a-zA-Z0-9_]</td>
-</tr>
-<tr>
-<td>\W</td>
-<td>对 \w 取非</td>
-</tr>
-</tbody>
-</table>
-<h3 id="3-空白字符元字符"><a href="#3-空白字符元字符" class="headerlink" title="3. 空白字符元字符"></a>3. 空白字符元字符</h3><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\s</td>
-<td>任何一个空白字符，等价于 [\f\n\r\t\v]</td>
-</tr>
-<tr>
-<td>\S</td>
-<td>对 \s 取非</td>
-</tr>
-</tbody>
-</table>
-<p>\x 匹配十六进制字符，\0 匹配八进制，例如 \x0A 对应 ASCII 字符 10 ，等价于 \n，也就是它会匹配 \n 。</p>
-<h1 id="五、重复匹配"><a href="#五、重复匹配" class="headerlink" title="五、重复匹配"></a>五、重复匹配</h1><p><strong>+</strong> 匹配 1 个或者多个字符， <strong>*</strong> 匹配 0 个或者多个，<strong>?</strong> 匹配 0 个或者 1 个。</p>
-<p><strong>应用</strong></p>
-<p>匹配邮箱地址。</p>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[\w.]+@\w+\.\w+</span><br></pre></td></tr></table></figure>
-<p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
-<p><strong>匹配结果</strong></p>
-<p><a href="mailto:**abc.def@qq.com" target="_blank" rel="noopener">**abc.def@qq.com</a>**</p>
-<p>为了可读性，常常把转义的字符放到字符集合 [ ] 中，但是含义是相同的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[\w.]+@\w+\.\w+</span><br><span class="line">[\w.]+@[\w]+\.[\w]+</span><br></pre></td></tr></table></figure>
-<p><strong>{n}</strong> 匹配 n 个字符，<strong>{m, n}</strong> 匹配 m~n 个字符，<strong>{m,}</strong> 至少匹配 m 个字符；</p>
-<p>* 和 + 都是贪婪型元字符，会匹配最多的内容，在元字符后面加 ? 可以转换为懒惰型元字符，例如 *?、+? 和 {m, n}? 。</p>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.+c</span><br></pre></td></tr></table></figure>
-<p>由于 + 是贪婪型的，因此 .+ 会匹配更可能多的内容，所以会把整个 abcabcabc 文本都匹配，而不是只匹配前面的 abc 文本。用懒惰型可以实现匹配前面的。</p>
-<p><strong>匹配结果</strong></p>
-<p><strong>abcabcabc</strong></p>
-<h1 id="六、位置匹配"><a href="#六、位置匹配" class="headerlink" title="六、位置匹配"></a>六、位置匹配</h1><h2 id="单词边界"><a href="#单词边界" class="headerlink" title="单词边界"></a>单词边界</h2><p><strong>\b</strong> 可以匹配一个单词的边界，边界是指位于 \w 和 \W 之间的位置；<strong>\B</strong> 匹配一个不是单词边界的位置。</p>
-<p>\b 只匹配位置，不匹配字符，因此 \babc\b 匹配出来的结果为 3 个字符。</p>
-<h2 id="字符串边界"><a href="#字符串边界" class="headerlink" title="字符串边界"></a>字符串边界</h2><p><strong>^</strong> 匹配整个字符串的开头，<strong>$</strong> 匹配结尾。</p>
-<p>^ 元字符在字符集合中用作求非，在字符集合外用作匹配字符串的开头。</p>
-<p>使用 (?m) 来打开分行匹配模式，在该模式下，换行被当做字符串的边界。</p>
-<p><strong>应用</strong></p>
-<p>匹配代码中以 // 开始的注释行</p>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(?m)^\s*//.*$</span><br></pre></td></tr></table></figure>
-<p>如果没用 (?m)，则只会匹配 // 注释 1 以及之后的所有内容。用了分行匹配模式之后，换行符被当成是字符串分隔符，因此能正确匹配出两个注释内容。</p>
-<p><strong>匹配结果</strong></p>
-<ol>
-<li>public void fun() {</li>
-<li>​     <strong>// 注释 1</strong></li>
-<li>​     int a = 1;</li>
-<li>​     int b = 2;</li>
-<li>​     <strong>// 注释 2</strong></li>
-<li>​     int c = a + b;</li>
-<li>}</li>
-</ol>
-<h1 id="七、使用子表达式"><a href="#七、使用子表达式" class="headerlink" title="七、使用子表达式"></a>七、使用子表达式</h1><p>使用 <strong>( )</strong> 定义一个子表达式。子表达式的内容可以当成一个独立元素，即可以将它看成一个字符，并且使用 * 等元字符。</p>
-<p>子表达式可以嵌套，但是嵌套层次过深会变得很难理解。</p>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(ab) &#123;2,&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>匹配结果</strong></p>
-<p><strong>ababab</strong></p>
-<p><strong>|</strong> 是或元字符，它把左边和右边所有的部分都看成单独的两个部分，两个部分只要有一个匹配就行。</p>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(19|20)\d&#123;2&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>匹配结果</strong></p>
-<ol>
-<li><strong>1900</strong></li>
-<li><strong>2010</strong></li>
-<li>1020</li>
-</ol>
-<p><strong>应用</strong></p>
-<p>匹配 IP 地址。IP 地址中每部分都是 0-255 的数字，用正则表达式匹配时以下情况是合法的：</p>
-<ol>
-<li>一位或者两位的数字</li>
-<li>1 开头的三位数</li>
-<li>2 开头，第 2 位是 0-4 的三位数</li>
-<li>25 开头，第 3 位是 0-5 的三位数</li>
-</ol>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(((\d&#123;1,2&#125;)|(1\d&#123;2&#125;)|(2[0-4]\d)|(25[0-5]))\.) &#123;3&#125;(((\d&#123;1,2&#125;)|(1\d&#123;2&#125;)|(2[0-4]\d)|(25[0-5])))</span><br></pre></td></tr></table></figure>
-<p><strong>匹配结果</strong></p>
-<ol>
-<li><strong>192.168.0.1</strong></li>
-<li>555.555.555.555</li>
-</ol>
-<h1 id="八、回溯引用"><a href="#八、回溯引用" class="headerlink" title="八、回溯引用"></a>八、回溯引用</h1><p>回溯引用使用 <strong>\n</strong> 来引用某个子表达式，其中 n 代表的是子表达式的序号，从 1 开始。它和子表达式匹配的内容一致，比如子表达式匹配到 abc，那么回溯引用部分也需要匹配 abc 。</p>
-<p><strong>应用</strong></p>
-<p>匹配 HTML 中合法的标题元素。</p>
-<p><strong>正则表达式</strong></p>
-<p>\1 将回溯引用子表达式 (h[1-6]) 匹配的内容，也就是说必须和子表达式匹配的内容一致。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;(h[1-6])&gt;\w*?&lt;/\1&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>匹配结果</strong></p>
-<ol>
-<li><strong><h1>x</h1></strong></li>
-<li><strong><h2>x</h2></strong></li>
-<li><h3>x</h3></li>
-</ol>
-<h2 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h2><p>需要用到两个正则表达式。</p>
-<p><strong>应用</strong></p>
-<p>修改电话号码格式。</p>
-<p><strong>文本</strong></p>
-<p>313-555-1234</p>
-<p><strong>查找正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(\d&#123;3&#125;)(-)(\d&#123;3&#125;)(-)(\d&#123;4&#125;)</span><br></pre></td></tr></table></figure>
-<p><strong>替换正则表达式</strong></p>
-<p>在第一个子表达式查找的结果加上 () ，然后加一个空格，在第三个和第五个字表达式查找的结果中间加上 - 进行分隔。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">($1) $3-$5</span><br></pre></td></tr></table></figure>
-<p><strong>结果</strong></p>
-<p>(313) 555-1234</p>
-<h2 id="大小写转换"><a href="#大小写转换" class="headerlink" title="大小写转换"></a>大小写转换</h2><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\l</td>
-<td>把下个字符转换为小写</td>
-</tr>
-<tr>
-<td>\u</td>
-<td>把下个字符转换为大写</td>
-</tr>
-<tr>
-<td>\L</td>
-<td>把\L 和\E 之间的字符全部转换为小写</td>
-</tr>
-<tr>
-<td>\U</td>
-<td>把\U 和\E 之间的字符全部转换为大写</td>
-</tr>
-<tr>
-<td>\E</td>
-<td>结束\L 或者\U</td>
-</tr>
-</tbody>
-</table>
-<p><strong>应用</strong></p>
-<p>把文本的第二个和第三个字符转换为大写。</p>
-<p><strong>文本</strong></p>
-<p>abcd</p>
-<p><strong>查找</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(\w)(\w&#123;2&#125;)(\w)</span><br></pre></td></tr></table></figure>
-<p><strong>替换</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$1\U$2\E$3</span><br></pre></td></tr></table></figure>
-<p><strong>结果</strong></p>
-<p>aBCd</p>
-<h1 id="九、前后查找"><a href="#九、前后查找" class="headerlink" title="九、前后查找"></a>九、前后查找</h1><p>前后查找规定了匹配的内容首尾应该匹配的内容，但是又不包含首尾匹配的内容。向前查找用 <strong>?=</strong> 来定义，它规定了尾部匹配的内容，这个匹配的内容在 ?= 之后定义。所谓向前查找，就是规定了一个匹配的内容，然后以这个内容为尾部向前面查找需要匹配的内容。向后匹配用 ?&lt;= 定义。</p>
-<p><strong>应用</strong></p>
-<p>查找出邮件地址 @ 字符前面的部分。</p>
-<p><strong>正则表达式</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\w+(?=@)</span><br></pre></td></tr></table></figure>
-<p><strong>结果</strong></p>
-<p><strong>abc</strong> @qq.com</p>
-<p>对向前和向后查找取非，只要把 = 替换成 ! 即可，比如 (?=) 替换成 (?!) 。取非操作使得匹配那些首尾不符合要求的内容。</p>
-<h1 id="十、嵌入条件"><a href="#十、嵌入条件" class="headerlink" title="十、嵌入条件"></a>十、嵌入条件</h1><h2 id="回溯引用条件"><a href="#回溯引用条件" class="headerlink" title="回溯引用条件"></a>回溯引用条件</h2><p>条件判断为某个子表达式是否匹配，如果匹配则需要继续匹配条件表达式后面的内容。</p>
-<p><strong>正则表达式</strong></p>
-<p>子表达式 (() 匹配一个左括号，其后的 ? 表示匹配 0 个或者 1 个。 ?(1) 为条件，当子表达式 1 匹配时条件成立，需要执行 ) 匹配，也就是匹配右括号。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(\()?abc(?(1)\))</span><br></pre></td></tr></table></figure>
-<p><strong>结果</strong></p>
-<ol>
-<li><strong>(abc)</strong></li>
-<li><strong>abc</strong></li>
-<li>(abc</li>
-</ol>
-<h2 id="前后查找条件"><a href="#前后查找条件" class="headerlink" title="前后查找条件"></a>前后查找条件</h2><p>条件为定义的首尾是否匹配，如果匹配，则继续执行后面的匹配。注意，首尾不包含在匹配的内容中。</p>
-<p><strong>正则表达式</strong></p>
-<p>?(?=-) 为前向查找条件，只有在以 - 为前向查找的结尾能匹配 \d{5} ，才继续匹配 -\d{4} 。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d&#123;5&#125;(?(?=-)-\d&#123;4&#125;)</span><br></pre></td></tr></table></figure>
-<p><strong>结果</strong></p>
-<ol>
-<li><strong>11111</strong></li>
-<li>22222-</li>
-<li><strong>33333-4444</strong></li>
-</ol>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li>BenForta. 正则表达式必知必会 [M]. 人民邮电出版社, 2007.</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-java学习" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-java学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2019/03/15/java学习/" class="article-date">
@@ -1612,154 +728,164 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2019/03/15/java学习/"></a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 天纵旺才 的个人博客">天纵旺才</a></p>
+        <p><span>发布时间:</span>2019年03月15日 - 11时08分</p>
+        <p><span>最后更新:</span>2019年03月13日 - 12时04分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2019/03/15/java学习/" title>https://wangshuangwang.github.io/2019/03/15/java学习/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://wangshuangwang.github.io/2019/03/15/java学习/　　作者: 天纵旺才" title></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2019/03/15/正则表达式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/14/安装hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">安装hexo</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、关键字"><span class="toc-number">1.</span> <span class="toc-text">一、关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#final"><span class="toc-number">1.1.</span> <span class="toc-text">final</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#static"><span class="toc-number">1.2.</span> <span class="toc-text">static</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、Object-通用方法"><span class="toc-number">2.</span> <span class="toc-text">二、Object 通用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#概览"><span class="toc-number">2.1.</span> <span class="toc-text">概览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#equals"><span class="toc-number">2.2.</span> <span class="toc-text">equals()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hashCode"><span class="toc-number">2.3.</span> <span class="toc-text">hashCode()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#toString-NaN"><span class="toc-number">2.4.</span> <span class="toc-text">toString()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clone"><span class="toc-number">2.5.</span> <span class="toc-text">clone()</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、继承"><span class="toc-number">3.</span> <span class="toc-text">四、继承</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#访问权限"><span class="toc-number">3.1.</span> <span class="toc-text">访问权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#抽象类与接口"><span class="toc-number">3.2.</span> <span class="toc-text">抽象类与接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#super"><span class="toc-number">3.3.</span> <span class="toc-text">super</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#覆盖与重载"><span class="toc-number">3.4.</span> <span class="toc-text">覆盖与重载</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、String"><span class="toc-number">4.</span> <span class="toc-text">五、String</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#String-StringBuffer-and-StringBuilder"><span class="toc-number">4.1.</span> <span class="toc-text">String, StringBuffer and StringBuilder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-不可变的原因"><span class="toc-number">4.2.</span> <span class="toc-text">String 不可变的原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-intern"><span class="toc-number">4.3.</span> <span class="toc-text">String.intern()</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、基本类型与运算"><span class="toc-number">5.</span> <span class="toc-text">六、基本类型与运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#包装类型"><span class="toc-number">5.1.</span> <span class="toc-text">包装类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch"><span class="toc-number">5.2.</span> <span class="toc-text">switch</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、反射"><span class="toc-number">6.</span> <span class="toc-text">七、反射</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、异常"><span class="toc-number">7.</span> <span class="toc-text">八、异常</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#九、泛型"><span class="toc-number">8.</span> <span class="toc-text">九、泛型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十、注解"><span class="toc-number">9.</span> <span class="toc-text">十、注解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十一、特性"><span class="toc-number">10.</span> <span class="toc-text">十一、特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象三大特性"><span class="toc-number">10.1.</span> <span class="toc-text">面向对象三大特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-各版本的新特性"><span class="toc-number">10.2.</span> <span class="toc-text">Java 各版本的新特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-与-C-的区别"><span class="toc-number">10.3.</span> <span class="toc-text">Java 与 C++ 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JRE-or-JDK"><span class="toc-number">10.4.</span> <span class="toc-text">JRE or JDK</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-number">11.</span> <span class="toc-text">参考资料</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
 
-
-
-  
-    <article id="post-安装hexo" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/14/安装hexo/" class="article-date">
-      <time datetime="2019-03-14T07:15:30.000Z" itemprop="datePublished">2019-03-14</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy">
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/14/安装hexo/">安装hexo</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
+            <a href="/2019/03/15/正则表达式/" title="上一篇: ">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/14/hello-world/" class="article-date">
-      <time datetime="2019-03-14T04:26:17.819Z" itemprop="datePublished">2019-03-14</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
+            <a href="/2019/03/14/安装hexo/" title="下一篇: 安装hexo">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/强大终端工具:terminator/">强大终端工具:terminator</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/java学习/">java学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/安装hexo/">安装hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/hello-world/">Hello World</a></li></ul>
     
-    <div class="article-info article-info-index">
-      
-      
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
 
-
-
-
-
-
-
-
-  
-  
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">
