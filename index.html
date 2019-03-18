@@ -281,6 +281,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-terminator安装配置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/03/18/terminator安装配置/" class="article-date">
+      <time datetime="2019-03-18T10:58:30.000Z" itemprop="datePublished">2019-03-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/18/terminator安装配置/">terminator安装配置</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="一、terminator的安装"><a href="#一、terminator的安装" class="headerlink" title="一、terminator的安装"></a>一、terminator的安装</h2><h3 id="1-使用apt包管理工具轻松安装"><a href="#1-使用apt包管理工具轻松安装" class="headerlink" title="1.使用apt包管理工具轻松安装"></a>1.使用apt包管理工具轻松安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install terminator</span><br></pre></td></tr></table></figure>
+<h3 id="2-美化配置"><a href="#2-美化配置" class="headerlink" title="2.美化配置"></a>2.美化配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.config/terminator/config</span><br></pre></td></tr></table></figure>
+<h3 id="3-添加如下代码"><a href="#3-添加如下代码" class="headerlink" title="3.添加如下代码"></a>3.添加如下代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[global_config]</span><br><span class="line">  title_transmit_bg_color = &quot;#d30102&quot;</span><br><span class="line">  focus = system</span><br><span class="line">  suppress_multiple_term_dialog = True</span><br><span class="line">[keybindings]</span><br><span class="line">[profiles]</span><br><span class="line">  [[default]]</span><br><span class="line">    palette = &quot;#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#d3d0c8:#747369:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#f2f0ec&quot;</span><br><span class="line">    background_color = &quot;#2D2D2D&quot; # 背景颜色</span><br><span class="line">    background_image = None   </span><br><span class="line">    background_darkness = 0.85 </span><br><span class="line">    cursor_color = &quot;#2D2D2D&quot; # 光标颜色</span><br><span class="line">    cursor_blink = True # 光标是否闪烁</span><br><span class="line">    foreground_color = &quot;#EEE9E9&quot; # 文字的颜色</span><br><span class="line">    use_system_font = False # 是否启用系统字体</span><br><span class="line">    font = Ubuntu Mono 13  # 字体设置，后面的数字表示字体大小</span><br><span class="line">    copy_on_selection = True # 选择文本时同时将数据拷贝到剪切板中</span><br><span class="line">    show_titlebar = False # 不显示标题栏，也就是 terminator 中那个默认的红色的标题栏</span><br><span class="line">[layouts]</span><br><span class="line">  [[default]]</span><br><span class="line">    [[[child1]]]</span><br><span class="line">      type = Terminal</span><br><span class="line">      parent = window0</span><br><span class="line">      profile = default</span><br><span class="line">    [[[window0]]]</span><br><span class="line">      type = Window</span><br><span class="line">      parent = &quot;&quot;</span><br><span class="line">[plugins]</span><br></pre></td></tr></table></figure>
+<h2 id="二、设置不区分大小写及添加记忆"><a href="#二、设置不区分大小写及添加记忆" class="headerlink" title="二、设置不区分大小写及添加记忆"></a>二、设置不区分大小写及添加记忆</h2><h3 id="1-记录前面输入内容"><a href="#1-记录前面输入内容" class="headerlink" title="1.记录前面输入内容"></a>1.记录前面输入内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入该目录：vim ~/.bashrc</span><br><span class="line">末尾新增：</span><br><span class="line">bind &apos;&quot;\e[A&quot;: history-search-backward&apos;</span><br><span class="line">bind &apos;&quot;\e[B&quot;: history-search-forward&apos;</span><br><span class="line">完成之后必须要source刷新</span><br></pre></td></tr></table></figure>
+<h3 id="2-输入时不去分大小写"><a href="#2-输入时不去分大小写" class="headerlink" title="2.输入时不去分大小写"></a>2.输入时不去分大小写</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入该目录：vim ~/.inputrc</span><br><span class="line">末尾新增：</span><br><span class="line">set completion-ignore-case on</span><br><span class="line">set show-all-if-ambiguous on</span><br><span class="line">完成之后必须要source刷新</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-redis相关命令" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
