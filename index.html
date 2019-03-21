@@ -283,6 +283,100 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-rabbitmq使用使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/03/21/rabbitmq使用使用/" class="article-date">
+      <time datetime="2019-03-21T03:16:30.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/21/rabbitmq使用使用/">rabbitmq使用使用</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="一、rabbitmq概念"><a href="#一、rabbitmq概念" class="headerlink" title="一、rabbitmq概念"></a>一、rabbitmq概念</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq是流行的开源消息队列系统，是AMQP的标准实现，用elang语言开发，其具有良好的性能和时效性，同时也能够非常好的支持集群和负载部署，适合大规模的分布式系统部署</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbit模式大概分为以下三种：单一模式、普通模式、镜像模式</span><br></pre></td></tr></table></figure>
+<h3 id="1-单一模式"><a href="#1-单一模式" class="headerlink" title="1.单一模式"></a>1.单一模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">单机情况下不做集群，单独运行下rabbitmq</span><br></pre></td></tr></table></figure>
+<h3 id="2-普通模式"><a href="#2-普通模式" class="headerlink" title="2.普通模式"></a>2.普通模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">普通模式也被称之为默认模式，通过两个节点（rabbitmq01、rabbitmq02）来说明，对于queue来说，消息实体只存其中的一个节点rabbitmq01或者rabbitmq02,rabbitmq01和rabbitmq02两个节点仅有相同的元数据，即队列的结构。</span><br><span class="line">rabbit01节点的Queue后consumer从rabbit02节点消费时，RabbitMQ会临时在rabbit01、rabbit02间进行消息传输，把A中的消息实体取出并经过B发送给consumer。所以consumer应尽量连接每一个节点，从中取消息。即对于同一个逻辑队列，要在多个节点建立物理Queue。否则无论consumer连rabbit01或rabbit02，出口总在rabbit01，会产生瓶颈。当rabbit01节点故障后，rabbit02节点无法取到rabbit01节点中还未消费的消息实体。如果做了消息持久化，那么得等rabbit01节点恢复，然后才可被消费；如果没有持久化的话，就会产生消息丢失的现象。</span><br></pre></td></tr></table></figure>
+<h3 id="3-镜像模式"><a href="#3-镜像模式" class="headerlink" title="3.镜像模式"></a>3.镜像模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">把需要的队列做成镜像队列，存在与多个节点属于RabbitMQ的HA方案。该模式解决了普通模式中的问题，其实质和普通模式不同之处在于，消息实体会主动在镜像节点间同步，而不是在客户端取数据时临时拉取。该模式带来的副作用也很明显，除了降低系统性能外，如果镜像队列数量过多，加之大量的消息进入，集群内部的网络带宽将会被这种同步通讯大大消耗掉。所以在对可靠性要求较高的场合中适用。</span><br></pre></td></tr></table></figure>
+<h3 id="4-rabbitmq的工作流程图"><a href="#4-rabbitmq的工作流程图" class="headerlink" title="4.rabbitmq的工作流程图"></a>4.rabbitmq的工作流程图</h3><p><img src="/images/mq.png" alt="mq"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">具体说明：</span><br><span class="line">交换机的作用是接收相应的消息并且绑定到指定的队列，交换机有四种类型，分为是Direct、topic、headers、Fanout</span><br><span class="line">1）Direct是RabbitMQ默认的交换机模式,也是最简单的模式.即创建消息队列的时候,指定一个BindingKey.当发送者发送消息的时候,指定对应的Key.当Key和消息队列的BindingKey一致的时候,消息将会被发送到该消息队列</span><br><span class="line">2）topic转发信息主要是依据通配符,队列和交换机的绑定主要是依据一种模式(通配符+字符串),而当发送消息的时候,只有指定的Key和该模式相匹配的时候,消息才会被发送到该消息队列中</span><br><span class="line">3）headers也是根据一个规则进行匹配,在消息队列和交换机绑定的时候会指定一组键值对规则,而发送消息的时候也会指定一组键值对规则,当两组键值对规则相匹配的时候,消息会被发送到匹配的消息队列中</span><br><span class="line">4）Fanout是路由广播的形式,将会把消息发给绑定它的全部队列,即便设置了key,也会被忽略</span><br></pre></td></tr></table></figure>
+<h2 id="二、rabbitmq的安装（基于ubuntu模式下）"><a href="#二、rabbitmq的安装（基于ubuntu模式下）" class="headerlink" title="二、rabbitmq的安装（基于ubuntu模式下）"></a>二、rabbitmq的安装（基于ubuntu模式下）</h2><h3 id="1-在线安装（自动安装）"><a href="#1-在线安装（自动安装）" class="headerlink" title="1.在线安装（自动安装）"></a>1.在线安装（自动安装）</h3><h4 id="1）自动安装"><a href="#1）自动安装" class="headerlink" title="1）自动安装"></a>1）自动安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install rabbitmq-server</span><br><span class="line">查看运行状态：service rabbitmq-server status</span><br></pre></td></tr></table></figure>
+<h4 id="2）手动安装"><a href="#2）手动安装" class="headerlink" title="2）手动安装"></a>2）手动安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">创建文件夹：mkdir software</span><br><span class="line">           cd software</span><br><span class="line">获取安装包：wget http://www.rabbitmq.com/releases/rabbitmq-server/v2.7.0/rabbitmq-server-generic-unix-2.7.0.tar.gz   </span><br><span class="line">解压：tar -zxvf rabbitmq-server-generic-unix-2.7.0.tar.gz</span><br><span class="line">      cd rabbitmq_server-2.7.0/</span><br><span class="line">运行：sbin/rabbitmq-server </span><br><span class="line">查看运行状态：cd ~/software/rabbitmq_server-2.7.0/</span><br><span class="line">             sbin/rabbitmqctl status</span><br></pre></td></tr></table></figure>
+<h3 id="2-离线安装"><a href="#2-离线安装" class="headerlink" title="2.离线安装"></a>2.离线安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">需要的软件包：（ncurses-6.1.tar.gz   openssl-1.0.1s.tar.gz  otp_src_19.3.tar.gz   rabbitmq-server-generic-unix-3.6.10.tar.xz）</span><br><span class="line">一、ncurses-6.1.tar.gz安装</span><br><span class="line">①tar zxvf ncurses-6.1.tar.gz</span><br><span class="line">②cd ncurses-6.1</span><br><span class="line">③./configure或者./config</span><br><span class="line">④ make</span><br><span class="line">⑤make install</span><br><span class="line">二、openssl-1.0.1s.tar.gz安装</span><br><span class="line">①tar -zvxf openssl-1.0.1s.tar.gz</span><br><span class="line">②cd openssl-1.0.1s</span><br><span class="line">③./config --prefix=/usr/local/openssl</span><br><span class="line">④修改Makefile：sudo vim Makefile(将原来的：CFLAG=     -DOPENSSL_THREADS  修改为： CFLAG= -fPIC -DOPENSSL_THREADS 也就是添加-fPIC)</span><br><span class="line">⑤make</span><br><span class="line">⑥make install</span><br><span class="line">三、otp_src_19.3.tar.gz安装</span><br><span class="line">①tar xf otp_src_19.3.tar.gz</span><br><span class="line">②cd otp_src_19.3</span><br><span class="line">③./configure --prefix=/usr/local/erlang    --with-ssl=/usr/local/openssl</span><br><span class="line">④make&amp;&amp; make install</span><br><span class="line">四、rabbitmq-server-generic-unix-3.6.10.tar.xz安装</span><br><span class="line">1.离线安装</span><br><span class="line">①tar -Jxvf rabbitmq-server-generic-unix-3.6.10.tar.xz或者tar -xvf rabbitmq-server-generic-unix-3.6.10.tar</span><br><span class="line">②cp -R rabbitmq_server-3.6.10/   /usr/local/rabbitmq/</span><br><span class="line">③chmod -R 755 /usr/local/rabbitmq/sbin</span><br><span class="line">2.rabbitmq启动</span><br><span class="line">①cd /usr/local/rabbitmq/sbin</span><br><span class="line">②./rabbitmq-server</span><br><span class="line">3.开启web管理插件</span><br><span class="line">①cd /usr/local/rabbitmq/sbin</span><br><span class="line">②./rabbitmq-plugins enable rabbitmq_management</span><br><span class="line">4.rabbitmq重启</span><br><span class="line">①cd /usr/local/rabbitmq/sbin</span><br><span class="line">②./rabbitmqctl stop   ## 停应用</span><br><span class="line">③./rabbitmq-server    ## 启动应用</span><br><span class="line">5.通过web管理</span><br><span class="line">访问http://localhost:15672</span><br><span class="line">默认用户/密码 ： guest/guest</span><br><span class="line">注意初始状态只能本地登录，不可通过远程web访问，给权限也不行。需要远程访问的，必须新建用户并赋权限。</span><br><span class="line">6.用户管理并赋权限</span><br><span class="line">①添加用户：用户名：user  密码：q1w2e3r4</span><br><span class="line">cd /usr/local/rabbitmq/sbin      ./rabbitmqctl add_user mqadmin mqadmin</span><br><span class="line">②给用户添加角色</span><br><span class="line">./rabbitmqctl set_user_tags mqadmin administrator</span><br><span class="line">③给用户授权</span><br><span class="line">./rabbitmqctl set_permissions -p / mqadmin &apos;.*&apos; &apos;.*&apos; &apos;.*&apos;</span><br><span class="line">四、安装完成之后验证erlang 是否安装成功</span><br><span class="line">① cd /usr/local/erlang</span><br><span class="line">②执行： erl -v</span><br><span class="line">③ crypto:start().  （重点：此处执行玩提示ok，说明erlang安装完成，可以继续下一步，如果提示：** exception error: undefined function crypto:start/0，需要重新安装erlang ）</span><br><span class="line">安装教程参考链接：https://segmentfault.com/a/1190000010480589</span><br><span class="line">                 https://blog.csdn.net/qq_35946990/article/details/78967660</span><br><span class="line">                 https://blog.csdn.net/u010739551/article/details/80848993</span><br><span class="line">                 https://blog.csdn.net/zhongruixian/article/details/21076405</span><br></pre></td></tr></table></figure>
+<h2 id="三、rabbitmq的配置"><a href="#三、rabbitmq的配置" class="headerlink" title="三、rabbitmq的配置"></a>三、rabbitmq的配置</h2><h3 id="1-修改配置文件"><a href="#1-修改配置文件" class="headerlink" title="1.修改配置文件"></a>1.修改配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">通过查看服务状态：service rabbitmq-server status</span><br><span class="line">#cd /etc/rabbitmq/</span><br><span class="line">#vim rabbitmq.config</span><br><span class="line">编辑内容如下：</span><br><span class="line">[&#123;rabbit, [&#123;loopback_users, []&#125;]&#125;].</span><br><span class="line">这里的意思是开放使用，rabbitmq默认创建的用户guest，密码也是guest，这个用户默认只能是本机访问，localhost或者127.0.0.1，从外部访问需要添加上面的配置</span><br><span class="line">保存配置后重启服务：</span><br><span class="line">#service rabbitmq-server stop</span><br><span class="line">#service rabbitmq-server start</span><br></pre></td></tr></table></figure>
+<h3 id="2-rabbitmq的一些基本操作"><a href="#2-rabbitmq的一些基本操作" class="headerlink" title="2.rabbitmq的一些基本操作"></a>2.rabbitmq的一些基本操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 添加开机启动RabbitMQ服务</span><br><span class="line">sudo chkconfig rabbitmq-server on</span><br><span class="line"># 启动服务</span><br><span class="line">sudo /sbin/service rabbitmq-server start </span><br><span class="line"># 查看服务状态</span><br><span class="line">sudo /sbin/service rabbitmq-server status</span><br><span class="line"># 停止服务</span><br><span class="line">sudo /sbin/service rabbitmq-server stop</span><br><span class="line"># 查看当前所有用户</span><br><span class="line">sudo rabbitmqctl list_users</span><br><span class="line"># 查看默认guest用户的权限</span><br><span class="line">sudo rabbitmqctl list_user_permissions guest</span><br><span class="line"># 由于RabbitMQ默认的账号用户名和密码都是guest。为了安全起见, 先删掉默认用户</span><br><span class="line">sudo rabbitmqctl delete_user guest</span><br><span class="line"># 添加新用户</span><br><span class="line">sudo rabbitmqctl add_user username password</span><br><span class="line"># 设置用户tag</span><br><span class="line">sudo rabbitmqctl set_user_tags username administrator</span><br><span class="line"># 赋予用户默认vhost的全部操作权限</span><br><span class="line">sudo rabbitmqctl set_permissions -p / username &quot;.*&quot; &quot;.*&quot; &quot;.*&quot;</span><br><span class="line"># 查看用户的权限</span><br><span class="line">sudo rabbitmqctl list_user_permissions username</span><br></pre></td></tr></table></figure>
+<h3 id="3-开启web-管理端口"><a href="#3-开启web-管理端口" class="headerlink" title="3.开启web 管理端口"></a>3.开启web 管理端口</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rabbitmq-plugins enable rabbitmq_management</span><br><span class="line">浏览器访问地址：http://localhost:15672</span><br></pre></td></tr></table></figure>
+<h3 id="4-开启用户远程访问"><a href="#4-开启用户远程访问" class="headerlink" title="4.开启用户远程访问"></a>4.开启用户远程访问</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">默认情况下，RabbitMQ的默认的guest用户只允许本机访问， 如果想让guest用户能够远程访问的话，只需要将配置文件中的loopback_users列表置为空即可</span><br><span class="line">&#123;loopback_users, []&#125;</span><br><span class="line">更新完之后需要重启服务才能生效</span><br></pre></td></tr></table></figure>
+<h2 id="四、rabbitmq使用案列说明"><a href="#四、rabbitmq使用案列说明" class="headerlink" title="四、rabbitmq使用案列说明"></a>四、rabbitmq使用案列说明</h2><h3 id="1-overview（概览选项）"><a href="#1-overview（概览选项）" class="headerlink" title="1.overview（概览选项）"></a>1.overview（概览选项）</h3><p><img src="/images/001.png" alt="001"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1）totals项：展示的是统计信息，对队列中的消息进行统计</span><br></pre></td></tr></table></figure>
+<p><img src="/images/002.png" alt="002"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2）node项，这里面展示的是rabbitmq的服务节点</span><br></pre></td></tr></table></figure>
+<p><img src="/images/003.png" alt="003"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3）ports and contexts:展示的是端口信息</span><br><span class="line">这里一共有三个端口，其中5672是amqp协议的端口，15672是RabbitMQ的管理工具端口(这就是我们现在操作的)，25672是做集群的端口，如果我们现在的Java程序要与RabbitMQ进行交互，需要和哪个端口交互呢？是5672。因为Java客户端需要与RabbitMQ服务进行数据交互，必须要遵循amqp协议协议，所以要走5672端口，而15672是RabbitMQ的管理工具的端口，与服务无关，仅仅是管理工具运行的端口。</span><br></pre></td></tr></table></figure>
+<p><img src="/images/004.png" alt="004"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4）export definitions:导入导出rabbitmq的基本信息</span><br></pre></td></tr></table></figure>
+<p><img src="/images/005.png" alt="005"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5）总图展示</span><br></pre></td></tr></table></figure>
+<p><img src="/images/mq图像.png" alt="mq图像"></p>
+<h3 id="2-connections"><a href="#2-connections" class="headerlink" title="2.connections"></a>2.connections</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">客户端连接，在这里可以看客户端连接rabbitmq服务的信息</span><br></pre></td></tr></table></figure>
+<p><img src="/images/006.png" alt="006"></p>
+<h3 id="3-channels"><a href="#3-channels" class="headerlink" title="3.channels"></a>3.channels</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">生产者和消费者连接的通道</span><br></pre></td></tr></table></figure>
+<p><img src="/images/007.png" alt="007"></p>
+<h3 id="4-exchanges（收到生产者消息，准备分发的通道）"><a href="#4-exchanges（收到生产者消息，准备分发的通道）" class="headerlink" title="4.exchanges（收到生产者消息，准备分发的通道）"></a>4.exchanges（收到生产者消息，准备分发的通道）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">管理队列、交换器、绑定、解绑</span><br></pre></td></tr></table></figure>
+<p><img src="/images/exchange1.png" alt="exchange1"></p>
+<p><img src="/images/exhange2.png" alt="exhange2"></p>
+<h3 id="5-queues（快递员）"><a href="#5-queues（快递员）" class="headerlink" title="5.queues（快递员）"></a>5.queues（快递员）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">添加队列：virtual host  name    durability  auto delete</span><br></pre></td></tr></table></figure>
+<p><img src="/images/queue1.png" alt="queue1"></p>
+<p><img src="/images/queue2.png" alt="queue2"></p>
+<h3 id="6-admin"><a href="#6-admin" class="headerlink" title="6.admin"></a>6.admin</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">添加用户：username  pasassword  confirm  tags</span><br></pre></td></tr></table></figure>
+<p><img src="/images/admin.png" alt="admin"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-terminator安装配置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
