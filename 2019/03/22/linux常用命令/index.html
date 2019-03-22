@@ -7,19 +7,19 @@
   
   
   
-  <title>Hello World | Swans</title>
+  <title>linux常用命令 | Swans</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Quick Start一、查看端口的命令1.netstat命令各参数说明1234567891011121314# 指明显示TCP端口netstat -t# 指明显示UDP端口netstat -u# 仅显示监听套接字netstat -l# 显示进程标识符和程序名称，每一个套接字/端口都属于一个程序netstat -p# 不进行DNS轮询，显示IPnetstat -n# 查看当前所有tcp端口nets">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://wangshuangwang.github.io/2019/03/14/hello-world/index.html">
+<meta property="og:title" content="linux常用命令">
+<meta property="og:url" content="https://wangshuangwang.github.io/2019/03/22/linux常用命令/index.html">
 <meta property="og:site_name" content="Swans">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Quick Start一、查看端口的命令1.netstat命令各参数说明1234567891011121314# 指明显示TCP端口netstat -t# 指明显示UDP端口netstat -u# 仅显示监听套接字netstat -l# 显示进程标识符和程序名称，每一个套接字/端口都属于一个程序netstat -p# 不进行DNS轮询，显示IPnetstat -n# 查看当前所有tcp端口nets">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-14T04:26:17.819Z">
+<meta property="og:updated_time" content="2019-03-22T02:27:03.777Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="linux常用命令">
+<meta name="twitter:description" content="Quick Start一、查看端口的命令1.netstat命令各参数说明1234567891011121314# 指明显示TCP端口netstat -t# 指明显示UDP端口netstat -u# 仅显示监听套接字netstat -l# 显示进程标识符和程序名称，每一个套接字/端口都属于一个程序netstat -p# 不进行DNS轮询，显示IPnetstat -n# 查看当前所有tcp端口nets">
   
     <link rel="alternative" href="/atom.xml" title="Swans" type="application/atom+xml">
   
@@ -282,11 +282,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/03/14/hello-world/" class="article-date">
-      <time datetime="2019-03-14T04:26:17.819Z" itemprop="datePublished">2019-03-14</time>
+      <a href="/2019/03/22/linux常用命令/" class="article-date">
+      <time datetime="2019-03-22T01:58:30.000Z" itemprop="datePublished">2019-03-22</time>
 </a>
 
     </div>
@@ -300,7 +300,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      linux常用命令
     </h1>
   
 
@@ -318,15 +318,19 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="一、查看端口的命令"><a href="#一、查看端口的命令" class="headerlink" title="一、查看端口的命令"></a>一、查看端口的命令</h2><h3 id="1-netstat命令各参数说明"><a href="#1-netstat命令各参数说明" class="headerlink" title="1.netstat命令各参数说明"></a>1.netstat命令各参数说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 指明显示TCP端口</span><br><span class="line">netstat -t</span><br><span class="line"># 指明显示UDP端口</span><br><span class="line">netstat -u</span><br><span class="line"># 仅显示监听套接字</span><br><span class="line">netstat -l</span><br><span class="line"># 显示进程标识符和程序名称，每一个套接字/端口都属于一个程序</span><br><span class="line">netstat -p</span><br><span class="line"># 不进行DNS轮询，显示IP</span><br><span class="line">netstat -n</span><br><span class="line"># 查看当前所有tcp端口</span><br><span class="line">netstat -ntlp</span><br><span class="line"># 查看所有80端口使用情况</span><br><span class="line">netstat -ntulp |grep 80</span><br></pre></td></tr></table></figure>
+<h2 id="2-lsof下查看程序端口"><a href="#2-lsof下查看程序端口" class="headerlink" title="2.lsof下查看程序端口"></a>2.lsof下查看程序端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 查看tomcat端口占用情况，查出进程号</span><br><span class="line">ps -aux | grep tomcat</span><br><span class="line"># 查看所有的进程和端口使用情况</span><br><span class="line">netstat -apn</span><br><span class="line">netstat -anp|grep 8080</span><br><span class="line">查看端口占用情况</span><br><span class="line">lsof -i :8080</span><br><span class="line">netstat -ntulp | grep 8080</span><br></pre></td></tr></table></figure>
+<h2 id="二、压缩、解压命令"><a href="#二、压缩、解压命令" class="headerlink" title="二、压缩、解压命令"></a>二、压缩、解压命令</h2><h3 id="1-tar命令"><a href="#1-tar命令" class="headerlink" title="1.tar命令"></a>1.tar命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解压：tar xzvf filename (不想看文件可通过：tar xzf filename)</span><br><span class="line">压缩：tar czvf filename.tar.gz   dirname</span><br></pre></td></tr></table></figure>
+<h3 id="2-gz命令"><a href="#2-gz命令" class="headerlink" title="2.gz命令"></a>2.gz命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">解压１：gunzip filename.gz</span><br><span class="line">解压２：gzip -d filename.gz</span><br><span class="line">压缩：gzip filename</span><br></pre></td></tr></table></figure>
+<h3 id="3-tar-gz和-tgz"><a href="#3-tar-gz和-tgz" class="headerlink" title="3..tar.gz和.tgz"></a>3..tar.gz和.tgz</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">解压：tar zxvf filename.tar.gz</span><br><span class="line">      压缩：tar zcvf filename.tar.gz dirname</span><br><span class="line">      压缩多个文件：tar zcvf filename.tar.gz dirname1 dirname2 dirname3 ...</span><br></pre></td></tr></table></figure>
+<h2 id="三、服务器各项状态"><a href="#三、服务器各项状态" class="headerlink" title="三、服务器各项状态"></a>三、服务器各项状态</h2><h3 id="1-查看服务器"><a href="#1-查看服务器" class="headerlink" title="1.查看服务器"></a>1.查看服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 查看cpu的个数</span><br><span class="line">cat /proc/cpuinfo | grep &quot;processor&quot;</span><br><span class="line"># 如果个数太多，可以用以下命令</span><br><span class="line">cat /proc/cpuinfo | grep &quot;processor&quot;|wc -l</span><br><span class="line"># 查看服务器的内存大小</span><br><span class="line">cat /proc/meminfo | grep MemTotal </span><br><span class="line"># 查看服务器硬盘大小</span><br><span class="line">df -hl</span><br></pre></td></tr></table></figure>
+<h3 id="2-文件夹命令"><a href="#2-文件夹命令" class="headerlink" title="2.文件夹命令"></a>2.文件夹命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 查看文件夹的大小命令</span><br><span class="line">进入文件夹执行 du -sh</span><br><span class="line"># 默认情况下按2次tab键才会出现提示，现在只需要按一次</span><br><span class="line">set show-all-if-ambiguous on</span><br><span class="line"># 不显示隐藏文件，特别是当你在Home目录时，自己会觉得眼前比较干净</span><br><span class="line">set match-hidden-files off</span><br><span class="line"># 自动补全时忽略大小写</span><br><span class="line">set completion-ignore-case on</span><br><span class="line"># 输入某个命令的一部分时，按上下箭头，会匹配关于这个命令的最近的使用历史</span><br><span class="line">&quot;\e[A&quot;: history-search-backward    &quot;\e[B&quot;: history-search-forward</span><br><span class="line">以上配置都在~/.bashrc或~/.inputrc</span><br></pre></td></tr></table></figure>
+<h2 id="四、screen命令"><a href="#四、screen命令" class="headerlink" title="四、screen命令"></a>四、screen命令</h2><h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">系统管理员经常需要SSH 或者telent 远程登录到Linux 服务器，经常运行一些需要很长时间才能完成的任务，比如系统备份、ftp 传输等等。通常情况下我们都是为每一个这样的任务开一个远程终端窗口，因为它们执行的时间太长了。必须等待它们执行完毕，在此期间不能关掉窗口或者断开连接，否则这个任务就会被杀掉，一切半途而废了。</span><br></pre></td></tr></table></figure>
+<h3 id="2-简介"><a href="#2-简介" class="headerlink" title="2.简介"></a>2.简介</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GNU Screen是一款由GNU计划开发的用于命令行终端切换的自由软件。用户可以通过该软件同时连接多个本地或远程的命令行会话，并在其间自由切换</span><br></pre></td></tr></table></figure>
+<h4 id="1）会话恢复"><a href="#1）会话恢复" class="headerlink" title="1）会话恢复"></a>1）会话恢复</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">只要Screen本身没有终止，在其内部运行的会话都可以恢复。这一点对于远程登录的用户特别有用——即使网络连接中断，用户也不会失去对已经打开的命令行会话的控制。只要再次登录到主机上执行screen -r就可以恢复会话的运行。同样在暂时离开的时候，也可以执行分离命令detach，在保证里面的程序正常运行的情况下让Screen挂起（切换到后台）。这一点和图形界面下的VNC很相似。</span><br></pre></td></tr></table></figure>
+<h4 id="2）多窗口"><a href="#2）多窗口" class="headerlink" title="2）多窗口"></a>2）多窗口</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在Screen环境下，所有的会话都独立的运行，并拥有各自的编号、输入、输出和窗口缓存。用户可以通过快捷键在不同的窗口下切换，并可以自由的重定向各个窗口的输入和输出。Screen实现了基本的文本操作，如复制粘贴等；还提供了类似滚动条的功能，可以查看窗口状况的历史记录。窗口还可以被分区和命名，还可以监视后台窗口的活动。</span><br></pre></td></tr></table></figure>
+<h4 id="3）会话共享"><a href="#3）会话共享" class="headerlink" title="3）会话共享"></a>3）会话共享</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Screen可以让一个或多个用户从不同终端多次登录一个会话，并共享会话的所有特性（比如可以看到完全相同的输出）。它同时提供了窗口访问权限的机制，可以对窗口进行密码保护</span><br></pre></td></tr></table></figure>
+<h3 id="3-screen-常用参数"><a href="#3-screen-常用参数" class="headerlink" title="3.screen 常用参数"></a>3.screen 常用参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#  新建一个叫yourname的session</span><br><span class="line">screen -S yourname</span><br><span class="line"># 列出当前所有的session</span><br><span class="line">screen -ls</span><br><span class="line"># 回到yourname这个session</span><br><span class="line">screen -r yourname</span><br><span class="line"># 远程detach某个session</span><br><span class="line">screen -d yourname</span><br><span class="line"># 结束当前session并回到yourname这个session</span><br><span class="line">screen -d -r yourname</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -335,13 +339,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/03/14/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a href="/2019/03/22/linux常用命令/">linux常用命令</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 天纵旺才 的个人博客">天纵旺才</a></p>
-        <p><span>发布时间:</span>2019年03月14日 - 12时26分</p>
-        <p><span>最后更新:</span>2019年03月14日 - 12时26分</p>
+        <p><span>发布时间:</span>2019年03月22日 - 09时58分</p>
+        <p><span>最后更新:</span>2019年03月22日 - 10时27分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/03/14/hello-world/" title="Hello World">https://wangshuangwang.github.io/2019/03/14/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://wangshuangwang.github.io/2019/03/14/hello-world/　　作者: 天纵旺才" title></span>
+            <span>原始链接:</span><a class="post-url" href="/2019/03/22/linux常用命令/" title="linux常用命令">https://wangshuangwang.github.io/2019/03/22/linux常用命令/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://wangshuangwang.github.io/2019/03/22/linux常用命令/　　作者: 天纵旺才" title></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -352,15 +356,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2019/03/14/安装hexo/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          安装hexo
-        
-      </div>
-    </a>
   
+    <a href="/2019/03/21/nginx配置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nginx配置</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -370,7 +370,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、查看端口的命令"><span class="toc-number">2.</span> <span class="toc-text">一、查看端口的命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-netstat命令各参数说明"><span class="toc-number">2.1.</span> <span class="toc-text">1.netstat命令各参数说明</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-lsof下查看程序端口"><span class="toc-number">3.</span> <span class="toc-text">2.lsof下查看程序端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、压缩、解压命令"><span class="toc-number">4.</span> <span class="toc-text">二、压缩、解压命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-tar命令"><span class="toc-number">4.1.</span> <span class="toc-text">1.tar命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-gz命令"><span class="toc-number">4.2.</span> <span class="toc-text">2.gz命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-tar-gz和-tgz"><span class="toc-number">4.3.</span> <span class="toc-text">3..tar.gz和.tgz</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、服务器各项状态"><span class="toc-number">5.</span> <span class="toc-text">三、服务器各项状态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-查看服务器"><span class="toc-number">5.1.</span> <span class="toc-text">1.查看服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-文件夹命令"><span class="toc-number">5.2.</span> <span class="toc-text">2.文件夹命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、screen命令"><span class="toc-number">6.</span> <span class="toc-text">四、screen命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-背景"><span class="toc-number">6.1.</span> <span class="toc-text">1.背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-简介"><span class="toc-number">6.2.</span> <span class="toc-text">2.简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）会话恢复"><span class="toc-number">6.2.1.</span> <span class="toc-text">1）会话恢复</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）多窗口"><span class="toc-number">6.2.2.</span> <span class="toc-text">2）多窗口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3）会话共享"><span class="toc-number">6.2.3.</span> <span class="toc-text">3）会话共享</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-screen-常用参数"><span class="toc-number">6.3.</span> <span class="toc-text">3.screen 常用参数</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -443,13 +443,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2019/03/14/安装hexo/" title="上一篇: 安装hexo">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/03/21/nginx配置/" title="下一篇: nginx配置">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/03/22/linux常用命令/">linux常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/21/nginx配置/">nginx配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/21/rabbitmq使用使用/">rabbitmq使用使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/ubuntu+tomcat负载均衡分布式集群配置/">ubuntu+tomcat负载均衡分布式集群配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/terminator安装配置/">terminator安装配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/redis相关命令/">redis相关命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/docker相关命令/">docker下的相关命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/书籍推荐/">书籍推荐</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/运维文档整理/">运维相关文档整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/安装hexo/">安装hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/hello-world/">Hello World</a></li></ul>

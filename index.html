@@ -283,6 +283,76 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-linux常用命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/03/22/linux常用命令/" class="article-date">
+      <time datetime="2019-03-22T01:58:30.000Z" itemprop="datePublished">2019-03-22</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/22/linux常用命令/">linux常用命令</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="一、查看端口的命令"><a href="#一、查看端口的命令" class="headerlink" title="一、查看端口的命令"></a>一、查看端口的命令</h2><h3 id="1-netstat命令各参数说明"><a href="#1-netstat命令各参数说明" class="headerlink" title="1.netstat命令各参数说明"></a>1.netstat命令各参数说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 指明显示TCP端口</span><br><span class="line">netstat -t</span><br><span class="line"># 指明显示UDP端口</span><br><span class="line">netstat -u</span><br><span class="line"># 仅显示监听套接字</span><br><span class="line">netstat -l</span><br><span class="line"># 显示进程标识符和程序名称，每一个套接字/端口都属于一个程序</span><br><span class="line">netstat -p</span><br><span class="line"># 不进行DNS轮询，显示IP</span><br><span class="line">netstat -n</span><br><span class="line"># 查看当前所有tcp端口</span><br><span class="line">netstat -ntlp</span><br><span class="line"># 查看所有80端口使用情况</span><br><span class="line">netstat -ntulp |grep 80</span><br></pre></td></tr></table></figure>
+<h2 id="2-lsof下查看程序端口"><a href="#2-lsof下查看程序端口" class="headerlink" title="2.lsof下查看程序端口"></a>2.lsof下查看程序端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 查看tomcat端口占用情况，查出进程号</span><br><span class="line">ps -aux | grep tomcat</span><br><span class="line"># 查看所有的进程和端口使用情况</span><br><span class="line">netstat -apn</span><br><span class="line">netstat -anp|grep 8080</span><br><span class="line">查看端口占用情况</span><br><span class="line">lsof -i :8080</span><br><span class="line">netstat -ntulp | grep 8080</span><br></pre></td></tr></table></figure>
+<h2 id="二、压缩、解压命令"><a href="#二、压缩、解压命令" class="headerlink" title="二、压缩、解压命令"></a>二、压缩、解压命令</h2><h3 id="1-tar命令"><a href="#1-tar命令" class="headerlink" title="1.tar命令"></a>1.tar命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解压：tar xzvf filename (不想看文件可通过：tar xzf filename)</span><br><span class="line">压缩：tar czvf filename.tar.gz   dirname</span><br></pre></td></tr></table></figure>
+<h3 id="2-gz命令"><a href="#2-gz命令" class="headerlink" title="2.gz命令"></a>2.gz命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">解压１：gunzip filename.gz</span><br><span class="line">解压２：gzip -d filename.gz</span><br><span class="line">压缩：gzip filename</span><br></pre></td></tr></table></figure>
+<h3 id="3-tar-gz和-tgz"><a href="#3-tar-gz和-tgz" class="headerlink" title="3..tar.gz和.tgz"></a>3..tar.gz和.tgz</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">解压：tar zxvf filename.tar.gz</span><br><span class="line">      压缩：tar zcvf filename.tar.gz dirname</span><br><span class="line">      压缩多个文件：tar zcvf filename.tar.gz dirname1 dirname2 dirname3 ...</span><br></pre></td></tr></table></figure>
+<h2 id="三、服务器各项状态"><a href="#三、服务器各项状态" class="headerlink" title="三、服务器各项状态"></a>三、服务器各项状态</h2><h3 id="1-查看服务器"><a href="#1-查看服务器" class="headerlink" title="1.查看服务器"></a>1.查看服务器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 查看cpu的个数</span><br><span class="line">cat /proc/cpuinfo | grep &quot;processor&quot;</span><br><span class="line"># 如果个数太多，可以用以下命令</span><br><span class="line">cat /proc/cpuinfo | grep &quot;processor&quot;|wc -l</span><br><span class="line"># 查看服务器的内存大小</span><br><span class="line">cat /proc/meminfo | grep MemTotal </span><br><span class="line"># 查看服务器硬盘大小</span><br><span class="line">df -hl</span><br></pre></td></tr></table></figure>
+<h3 id="2-文件夹命令"><a href="#2-文件夹命令" class="headerlink" title="2.文件夹命令"></a>2.文件夹命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 查看文件夹的大小命令</span><br><span class="line">进入文件夹执行 du -sh</span><br><span class="line"># 默认情况下按2次tab键才会出现提示，现在只需要按一次</span><br><span class="line">set show-all-if-ambiguous on</span><br><span class="line"># 不显示隐藏文件，特别是当你在Home目录时，自己会觉得眼前比较干净</span><br><span class="line">set match-hidden-files off</span><br><span class="line"># 自动补全时忽略大小写</span><br><span class="line">set completion-ignore-case on</span><br><span class="line"># 输入某个命令的一部分时，按上下箭头，会匹配关于这个命令的最近的使用历史</span><br><span class="line">&quot;\e[A&quot;: history-search-backward    &quot;\e[B&quot;: history-search-forward</span><br><span class="line">以上配置都在~/.bashrc或~/.inputrc</span><br></pre></td></tr></table></figure>
+<h2 id="四、screen命令"><a href="#四、screen命令" class="headerlink" title="四、screen命令"></a>四、screen命令</h2><h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">系统管理员经常需要SSH 或者telent 远程登录到Linux 服务器，经常运行一些需要很长时间才能完成的任务，比如系统备份、ftp 传输等等。通常情况下我们都是为每一个这样的任务开一个远程终端窗口，因为它们执行的时间太长了。必须等待它们执行完毕，在此期间不能关掉窗口或者断开连接，否则这个任务就会被杀掉，一切半途而废了。</span><br></pre></td></tr></table></figure>
+<h3 id="2-简介"><a href="#2-简介" class="headerlink" title="2.简介"></a>2.简介</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GNU Screen是一款由GNU计划开发的用于命令行终端切换的自由软件。用户可以通过该软件同时连接多个本地或远程的命令行会话，并在其间自由切换</span><br></pre></td></tr></table></figure>
+<h4 id="1）会话恢复"><a href="#1）会话恢复" class="headerlink" title="1）会话恢复"></a>1）会话恢复</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">只要Screen本身没有终止，在其内部运行的会话都可以恢复。这一点对于远程登录的用户特别有用——即使网络连接中断，用户也不会失去对已经打开的命令行会话的控制。只要再次登录到主机上执行screen -r就可以恢复会话的运行。同样在暂时离开的时候，也可以执行分离命令detach，在保证里面的程序正常运行的情况下让Screen挂起（切换到后台）。这一点和图形界面下的VNC很相似。</span><br></pre></td></tr></table></figure>
+<h4 id="2）多窗口"><a href="#2）多窗口" class="headerlink" title="2）多窗口"></a>2）多窗口</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在Screen环境下，所有的会话都独立的运行，并拥有各自的编号、输入、输出和窗口缓存。用户可以通过快捷键在不同的窗口下切换，并可以自由的重定向各个窗口的输入和输出。Screen实现了基本的文本操作，如复制粘贴等；还提供了类似滚动条的功能，可以查看窗口状况的历史记录。窗口还可以被分区和命名，还可以监视后台窗口的活动。</span><br></pre></td></tr></table></figure>
+<h4 id="3）会话共享"><a href="#3）会话共享" class="headerlink" title="3）会话共享"></a>3）会话共享</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Screen可以让一个或多个用户从不同终端多次登录一个会话，并共享会话的所有特性（比如可以看到完全相同的输出）。它同时提供了窗口访问权限的机制，可以对窗口进行密码保护</span><br></pre></td></tr></table></figure>
+<h3 id="3-screen-常用参数"><a href="#3-screen-常用参数" class="headerlink" title="3.screen 常用参数"></a>3.screen 常用参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#  新建一个叫yourname的session</span><br><span class="line">screen -S yourname</span><br><span class="line"># 列出当前所有的session</span><br><span class="line">screen -ls</span><br><span class="line"># 回到yourname这个session</span><br><span class="line">screen -r yourname</span><br><span class="line"># 远程detach某个session</span><br><span class="line">screen -d yourname</span><br><span class="line"># 结束当前session并回到yourname这个session</span><br><span class="line">screen -d -r yourname</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-nginx配置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -464,68 +534,6 @@
 
 
   
-    <article id="post-terminator安装配置" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/18/terminator安装配置/" class="article-date">
-      <time datetime="2019-03-18T10:58:30.000Z" itemprop="datePublished">2019-03-18</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/terminator安装配置/">terminator安装配置</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="一、terminator的安装"><a href="#一、terminator的安装" class="headerlink" title="一、terminator的安装"></a>一、terminator的安装</h2><h3 id="1-使用apt包管理工具轻松安装"><a href="#1-使用apt包管理工具轻松安装" class="headerlink" title="1.使用apt包管理工具轻松安装"></a>1.使用apt包管理工具轻松安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install terminator</span><br></pre></td></tr></table></figure>
-<h3 id="2-美化配置"><a href="#2-美化配置" class="headerlink" title="2.美化配置"></a>2.美化配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.config/terminator/config</span><br></pre></td></tr></table></figure>
-<h3 id="3-添加如下代码"><a href="#3-添加如下代码" class="headerlink" title="3.添加如下代码"></a>3.添加如下代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[global_config]</span><br><span class="line">  title_transmit_bg_color = &quot;#d30102&quot;</span><br><span class="line">  focus = system</span><br><span class="line">  suppress_multiple_term_dialog = True</span><br><span class="line">[keybindings]</span><br><span class="line">[profiles]</span><br><span class="line">  [[default]]</span><br><span class="line">    palette = &quot;#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#d3d0c8:#747369:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#f2f0ec&quot;</span><br><span class="line">    background_color = &quot;#2D2D2D&quot; # 背景颜色</span><br><span class="line">    background_image = None   </span><br><span class="line">    background_darkness = 0.85 </span><br><span class="line">    cursor_color = &quot;#2D2D2D&quot; # 光标颜色</span><br><span class="line">    cursor_blink = True # 光标是否闪烁</span><br><span class="line">    foreground_color = &quot;#EEE9E9&quot; # 文字的颜色</span><br><span class="line">    use_system_font = False # 是否启用系统字体</span><br><span class="line">    font = Ubuntu Mono 13  # 字体设置，后面的数字表示字体大小</span><br><span class="line">    copy_on_selection = True # 选择文本时同时将数据拷贝到剪切板中</span><br><span class="line">    show_titlebar = False # 不显示标题栏，也就是 terminator 中那个默认的红色的标题栏</span><br><span class="line">[layouts]</span><br><span class="line">  [[default]]</span><br><span class="line">    [[[child1]]]</span><br><span class="line">      type = Terminal</span><br><span class="line">      parent = window0</span><br><span class="line">      profile = default</span><br><span class="line">    [[[window0]]]</span><br><span class="line">      type = Window</span><br><span class="line">      parent = &quot;&quot;</span><br><span class="line">[plugins]</span><br></pre></td></tr></table></figure>
-<h2 id="二、设置不区分大小写及添加记忆"><a href="#二、设置不区分大小写及添加记忆" class="headerlink" title="二、设置不区分大小写及添加记忆"></a>二、设置不区分大小写及添加记忆</h2><h3 id="1-记录前面输入内容"><a href="#1-记录前面输入内容" class="headerlink" title="1.记录前面输入内容"></a>1.记录前面输入内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入该目录：vim ~/.bashrc</span><br><span class="line">末尾新增：</span><br><span class="line">bind &apos;&quot;\e[A&quot;: history-search-backward&apos;</span><br><span class="line">bind &apos;&quot;\e[B&quot;: history-search-forward&apos;</span><br><span class="line">完成之后必须要source刷新</span><br></pre></td></tr></table></figure>
-<h3 id="2-输入时不去分大小写"><a href="#2-输入时不去分大小写" class="headerlink" title="2.输入时不去分大小写"></a>2.输入时不去分大小写</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入该目录：vim ~/.inputrc</span><br><span class="line">末尾新增：</span><br><span class="line">set completion-ignore-case on</span><br><span class="line">set show-all-if-ambiguous on</span><br><span class="line">完成之后必须要source刷新</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-ubuntu+tomcat负载均衡分布式集群配置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -569,6 +577,68 @@
 <h3 id="5-正向代理"><a href="#5-正向代理" class="headerlink" title="5.正向代理"></a>5.正向代理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">客户端比较清楚自己要访问的服务器地址，服务器只清楚来自哪个代理服务器，不清楚具体是哪个客户端，正向代理屏蔽或者隐藏了真实的客户端信息</span><br></pre></td></tr></table></figure>
 <h3 id="6-反向代理"><a href="#6-反向代理" class="headerlink" title="6.反向代理"></a>6.反向代理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">主要用于服务器分布集群式部署，反向代理隐藏了服务器的信息</span><br></pre></td></tr></table></figure>
 <h3 id="7-nginx支持的负载均衡调度算法如下"><a href="#7-nginx支持的负载均衡调度算法如下" class="headerlink" title="7.nginx支持的负载均衡调度算法如下"></a>7.nginx支持的负载均衡调度算法如下</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1.weight轮询，接收到的顺序逐一分配到不同的后端服务器，即使在使用过程中某一台服务器宕机，nginx会自动将该服务器踢出队列，请求受理情况下不回收到任何影像，可以通过设置权重值来分配受理</span><br><span class="line">2.in_pash:每个请求按照发起客户端的ip的hash结果进行匹配，这样的算法下一个固定ip地址的客户端总会访问到同一个后端服务器，这也在一定程度上解决了集群部署环境下的session共享问题</span><br><span class="line">3.fair:智能调度算法，动态的根据后端服务器的请求处理到响应的时间进行均衡分配，响应时间短处理效率高的服务器分配到请求的概率高，响应时间长处理效率低的服务器分配的请求少。nginx默认不支持这种算 法，安装好upsteam_fair就可以</span><br><span class="line">4.url_hash:按照访问的url的hash结果分配请求，每个请求的url会指向后端的固定的某个服务器，可以在nginx作为静态服务器的情况下提高缓存效率</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-terminator安装配置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/03/18/terminator安装配置/" class="article-date">
+      <time datetime="2019-03-18T10:58:30.000Z" itemprop="datePublished">2019-03-18</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/18/terminator安装配置/">terminator安装配置</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h2 id="一、terminator的安装"><a href="#一、terminator的安装" class="headerlink" title="一、terminator的安装"></a>一、terminator的安装</h2><h3 id="1-使用apt包管理工具轻松安装"><a href="#1-使用apt包管理工具轻松安装" class="headerlink" title="1.使用apt包管理工具轻松安装"></a>1.使用apt包管理工具轻松安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install terminator</span><br></pre></td></tr></table></figure>
+<h3 id="2-美化配置"><a href="#2-美化配置" class="headerlink" title="2.美化配置"></a>2.美化配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.config/terminator/config</span><br></pre></td></tr></table></figure>
+<h3 id="3-添加如下代码"><a href="#3-添加如下代码" class="headerlink" title="3.添加如下代码"></a>3.添加如下代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[global_config]</span><br><span class="line">  title_transmit_bg_color = &quot;#d30102&quot;</span><br><span class="line">  focus = system</span><br><span class="line">  suppress_multiple_term_dialog = True</span><br><span class="line">[keybindings]</span><br><span class="line">[profiles]</span><br><span class="line">  [[default]]</span><br><span class="line">    palette = &quot;#2d2d2d:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#d3d0c8:#747369:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#f2f0ec&quot;</span><br><span class="line">    background_color = &quot;#2D2D2D&quot; # 背景颜色</span><br><span class="line">    background_image = None   </span><br><span class="line">    background_darkness = 0.85 </span><br><span class="line">    cursor_color = &quot;#2D2D2D&quot; # 光标颜色</span><br><span class="line">    cursor_blink = True # 光标是否闪烁</span><br><span class="line">    foreground_color = &quot;#EEE9E9&quot; # 文字的颜色</span><br><span class="line">    use_system_font = False # 是否启用系统字体</span><br><span class="line">    font = Ubuntu Mono 13  # 字体设置，后面的数字表示字体大小</span><br><span class="line">    copy_on_selection = True # 选择文本时同时将数据拷贝到剪切板中</span><br><span class="line">    show_titlebar = False # 不显示标题栏，也就是 terminator 中那个默认的红色的标题栏</span><br><span class="line">[layouts]</span><br><span class="line">  [[default]]</span><br><span class="line">    [[[child1]]]</span><br><span class="line">      type = Terminal</span><br><span class="line">      parent = window0</span><br><span class="line">      profile = default</span><br><span class="line">    [[[window0]]]</span><br><span class="line">      type = Window</span><br><span class="line">      parent = &quot;&quot;</span><br><span class="line">[plugins]</span><br></pre></td></tr></table></figure>
+<h2 id="二、设置不区分大小写及添加记忆"><a href="#二、设置不区分大小写及添加记忆" class="headerlink" title="二、设置不区分大小写及添加记忆"></a>二、设置不区分大小写及添加记忆</h2><h3 id="1-记录前面输入内容"><a href="#1-记录前面输入内容" class="headerlink" title="1.记录前面输入内容"></a>1.记录前面输入内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入该目录：vim ~/.bashrc</span><br><span class="line">末尾新增：</span><br><span class="line">bind &apos;&quot;\e[A&quot;: history-search-backward&apos;</span><br><span class="line">bind &apos;&quot;\e[B&quot;: history-search-forward&apos;</span><br><span class="line">完成之后必须要source刷新</span><br></pre></td></tr></table></figure>
+<h3 id="2-输入时不去分大小写"><a href="#2-输入时不去分大小写" class="headerlink" title="2.输入时不去分大小写"></a>2.输入时不去分大小写</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">进入该目录：vim ~/.inputrc</span><br><span class="line">末尾新增：</span><br><span class="line">set completion-ignore-case on</span><br><span class="line">set show-all-if-ambiguous on</span><br><span class="line">完成之后必须要source刷新</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -761,6 +831,69 @@
 
 
   
+    <article id="post-书籍推荐" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2019/03/15/书籍推荐/" class="article-date">
+      <time datetime="2019-03-15T07:08:38.000Z" itemprop="datePublished">2019-03-15</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/15/书籍推荐/">书籍推荐</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="围城"><a href="#围城" class="headerlink" title="围城"></a>围城</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">经典书评：毋庸置疑的经典之作。都说围城写婚姻，其实不然，每个阶段读都会有不同的感受，</span><br><span class="line">          婚姻，人性，人生，真实摊开，刺到骨子里，觉得人人刻薄的要命，机关算尽，可这就是现实啊。</span><br><span class="line">          最喜欢的还是书里的金句，笑点也挺多，真毒舌啊，钱老爷子真是行家啊。</span><br></pre></td></tr></table></figure>
+<h3 id="小王子"><a href="#小王子" class="headerlink" title="小王子"></a>小王子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">经典书评：如果有人钟爱着一朵独一无二的、盛开在浩瀚星海里的花。那么，当他抬头仰望繁星时，便会心满意足。</span><br><span class="line">          他会告诉自己：“我心爱的花在那里，在那颗遥远的星星上。”可是，如果羊把花吃掉了。那么，对他来说，</span><br><span class="line">          所有的星光便会在刹那间暗淡无光！而你却认为这并不重要！</span><br></pre></td></tr></table></figure>
+<h3 id="活着"><a href="#活着" class="headerlink" title="活着"></a>活着</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">经典书评：生而为人，生老病死、贫穷富贵、心甘情愿、逆来顺受总是要吃苦的。横竖都是吃苦，不如吃的洒脱点儿，</span><br><span class="line">          谁能说阿Q精神全然没有可取的地方。只要活着，就有希望，要做到否极泰来要耗掉多少希望、时间，熬得过来的是英雄，</span><br><span class="line">          熬不过来的是烈士。人生好坏都是受的过程，能偷生地偷生，不能的拍拍身上尘土做点儿样子给外人看总是好的</span><br></pre></td></tr></table></figure>
+<h3 id="追风筝的人"><a href="#追风筝的人" class="headerlink" title="追风筝的人"></a>追风筝的人</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">经典书评：其实每个人的生活很平淡,可能没有那样的事情让你来面对与阿米尔类似的困境.也没有人太多的人回象小说里的阿米尔那样,</span><br><span class="line">          在自己犯了错的多年以后,还能有重新赎罪的机会.现实中并没有太多机会去体会,也不会有太多的人愿意有这种机会来体会.</span><br><span class="line">          人们往往会忽视那个永远躲在角落,但是却是永远对你最亲的人.我们就是这样对待那些对自己全心全意而又别无他求的人的吗</span><br></pre></td></tr></table></figure>
+<h3 id="平凡的世界"><a href="#平凡的世界" class="headerlink" title="平凡的世界"></a>平凡的世界</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">经典书评：生活没有如果，他们的命运告诉了我们。我们每个人的命运都受制于这个时代。我们不能完完全全的决定着自己的命运，</span><br><span class="line">          我们要做的是怎样让我们更幸福。有远大的理想很好，想平凡的生活也好，这只是我们追求幸福的一种途径。</span><br></pre></td></tr></table></figure>
+<h3 id="倾城之恋"><a href="#倾城之恋" class="headerlink" title="倾城之恋"></a>倾城之恋</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">经典书评：《倾城之恋》主要写了白流苏和范柳原之间的爱情故事。女主人公白流苏，是一个离过婚的女人，在家族中的地位低下，</span><br><span class="line">          常遭到家人的唾骂及冷眼歧视。后来在妹妹宝络的相亲宴山遇到并爱上花花公子范柳原。于是她和范柳原展开了一场如“战争”式的恋爱。</span><br><span class="line">          在这场恋爱中他们互相猜疑，互相算计，生怕自已会陷入对方的陷阱中。后来战争爆发了，炮声冲击着整个城市，</span><br><span class="line">          他们这两个无依无靠的灵魂最终紧紧连在一起，成为乱世中的平凡夫妻。</span><br></pre></td></tr></table></figure>
+<h2 id="Slow-End"><a href="#Slow-End" class="headerlink" title="Slow End"></a>Slow End</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-运维文档整理" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -860,69 +993,6 @@
 
 
   
-    <article id="post-书籍推荐" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/03/15/书籍推荐/" class="article-date">
-      <time datetime="2019-03-15T07:08:38.000Z" itemprop="datePublished">2019-03-15</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/15/书籍推荐/">书籍推荐</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="围城"><a href="#围城" class="headerlink" title="围城"></a>围城</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">经典书评：毋庸置疑的经典之作。都说围城写婚姻，其实不然，每个阶段读都会有不同的感受，</span><br><span class="line">          婚姻，人性，人生，真实摊开，刺到骨子里，觉得人人刻薄的要命，机关算尽，可这就是现实啊。</span><br><span class="line">          最喜欢的还是书里的金句，笑点也挺多，真毒舌啊，钱老爷子真是行家啊。</span><br></pre></td></tr></table></figure>
-<h3 id="小王子"><a href="#小王子" class="headerlink" title="小王子"></a>小王子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">经典书评：如果有人钟爱着一朵独一无二的、盛开在浩瀚星海里的花。那么，当他抬头仰望繁星时，便会心满意足。</span><br><span class="line">          他会告诉自己：“我心爱的花在那里，在那颗遥远的星星上。”可是，如果羊把花吃掉了。那么，对他来说，</span><br><span class="line">          所有的星光便会在刹那间暗淡无光！而你却认为这并不重要！</span><br></pre></td></tr></table></figure>
-<h3 id="活着"><a href="#活着" class="headerlink" title="活着"></a>活着</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">经典书评：生而为人，生老病死、贫穷富贵、心甘情愿、逆来顺受总是要吃苦的。横竖都是吃苦，不如吃的洒脱点儿，</span><br><span class="line">          谁能说阿Q精神全然没有可取的地方。只要活着，就有希望，要做到否极泰来要耗掉多少希望、时间，熬得过来的是英雄，</span><br><span class="line">          熬不过来的是烈士。人生好坏都是受的过程，能偷生地偷生，不能的拍拍身上尘土做点儿样子给外人看总是好的</span><br></pre></td></tr></table></figure>
-<h3 id="追风筝的人"><a href="#追风筝的人" class="headerlink" title="追风筝的人"></a>追风筝的人</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">经典书评：其实每个人的生活很平淡,可能没有那样的事情让你来面对与阿米尔类似的困境.也没有人太多的人回象小说里的阿米尔那样,</span><br><span class="line">          在自己犯了错的多年以后,还能有重新赎罪的机会.现实中并没有太多机会去体会,也不会有太多的人愿意有这种机会来体会.</span><br><span class="line">          人们往往会忽视那个永远躲在角落,但是却是永远对你最亲的人.我们就是这样对待那些对自己全心全意而又别无他求的人的吗</span><br></pre></td></tr></table></figure>
-<h3 id="平凡的世界"><a href="#平凡的世界" class="headerlink" title="平凡的世界"></a>平凡的世界</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">经典书评：生活没有如果，他们的命运告诉了我们。我们每个人的命运都受制于这个时代。我们不能完完全全的决定着自己的命运，</span><br><span class="line">          我们要做的是怎样让我们更幸福。有远大的理想很好，想平凡的生活也好，这只是我们追求幸福的一种途径。</span><br></pre></td></tr></table></figure>
-<h3 id="倾城之恋"><a href="#倾城之恋" class="headerlink" title="倾城之恋"></a>倾城之恋</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">经典书评：《倾城之恋》主要写了白流苏和范柳原之间的爱情故事。女主人公白流苏，是一个离过婚的女人，在家族中的地位低下，</span><br><span class="line">          常遭到家人的唾骂及冷眼歧视。后来在妹妹宝络的相亲宴山遇到并爱上花花公子范柳原。于是她和范柳原展开了一场如“战争”式的恋爱。</span><br><span class="line">          在这场恋爱中他们互相猜疑，互相算计，生怕自已会陷入对方的陷阱中。后来战争爆发了，炮声冲击着整个城市，</span><br><span class="line">          他们这两个无依无靠的灵魂最终紧紧连在一起，成为乱世中的平凡夫妻。</span><br></pre></td></tr></table></figure>
-<h2 id="Slow-End"><a href="#Slow-End" class="headerlink" title="Slow End"></a>Slow End</h2>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-安装hexo" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -990,72 +1060,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2019/03/14/hello-world/" class="article-date">
-      <time datetime="2019-03-14T04:26:17.819Z" itemprop="datePublished">2019-03-14</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 </div>
